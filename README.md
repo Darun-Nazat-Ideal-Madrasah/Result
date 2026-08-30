@@ -1,2 +1,4 @@
-# Darin-Nazar-Madrasa
-Madrasah official website
+# Darin-Nazar-Madrasah
+দারিন-নাজার মাদরাসার ওয়েবসাইটের প্রাথমিক সংস্করণ।
+
+পরবর্তী ধাপে ফলাফল, ভর্তি, নোটিশ, রুটিন ও Admin Panel যুক্ত করা হবে।
