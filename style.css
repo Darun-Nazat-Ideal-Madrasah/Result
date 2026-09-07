@@ -1,1 +1,498 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f4f7f5;color:#173b2c}.topbar{height:64px;background:#075b3b;color:white;display:flex;align-items:center;padding:0 16px;gap:16px;position:sticky;top:0;z-index:5}.menu{border:0;background:transparent;color:white;font-size:28px}.brand{font-size:20px;font-weight:700;flex:1}.badge{width:40px;height:40px;border-radius:50%;background:white;color:#075b3b;display:grid;place-items:center;font-weight:bold}.hero{background:linear-gradient(135deg,#075b3b,#0c7a50);color:white;padding:45px 20px;text-align:center}.hero h1{margin:0 0 10px;font-size:30px}.hero p{margin:0;font-size:16px}.grid{max-width:900px;margin:22px auto;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:0 14px}.card{background:white;border-radius:14px;padding:22px;text-decoration:none;color:#173b2c;box-shadow:0 3px 12px #00000012}.card span{font-size:30px;display:block;margin-bottom:10px}.card b{display:block;font-size:18px}.card small{color:#66756e;display:block;margin-top:6px}.section{max-width:900px;margin:16px auto;padding:24px;background:white;border-radius:14px;box-shadow:0 2px 10px #00000010}.section h2{margin-top:0}.section p{color:#5c6b64}footer{text-align:center;padding:28px;color:#66756e}#drawer{position:fixed;top:64px;left:-300px;width:290px;height:calc(100vh - 64px);background:#064b31;color:white;z-index:10;transition:.25s;overflow:auto;box-shadow:4px 0 15px #0004}#drawer.open{left:0}.drawer-title{padding:25px 20px;font-size:20px;font-weight:bold;border-bottom:1px solid #ffffff22}#drawer a{display:block;color:white;text-decoration:none;padding:17px 20px;border-bottom:1px solid #ffffff12;font-size:16px}@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}.brand{font-size:17px}}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans Bengali", sans-serif;
+  background: #f4f7f5;
+  color: #173b2c;
+}
+
+
+/* ================= HEADER ================= */
+
+.topbar {
+  height: 64px;
+  background: #075b3b;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.menu {
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #075b3b;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+
+/* ================= SIDE MENU ================= */
+
+#drawer {
+  position: fixed;
+  top: 64px;
+  left: -310px;
+  width: 290px;
+  height: calc(100vh - 64px);
+  background: #064b31;
+  color: white;
+  z-index: 30;
+  transition: 0.25s;
+  overflow-y: auto;
+  box-shadow: 4px 0 15px #0004;
+}
+
+#drawer.open {
+  left: 0;
+}
+
+.drawer-title {
+  padding: 25px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff22;
+}
+
+#drawer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 17px 20px;
+  border-bottom: 1px solid #ffffff12;
+  font-size: 16px;
+}
+
+#drawer a:hover {
+  background: #075b3b;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  background: linear-gradient(135deg, #075b3b, #0c7a50);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+/* ================= HOME CARDS ================= */
+
+.grid {
+  max-width: 900px;
+  margin: 22px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 0 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  color: #173b2c;
+  box-shadow: 0 3px 12px #00000012;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px #00000018;
+}
+
+.card span {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card b {
+  display: block;
+  font-size: 18px;
+}
+
+.card small {
+  color: #66756e;
+  display: block;
+  margin-top: 6px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px #00000010;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.section p {
+  color: #5c6b64;
+}
+
+
+/* ================= NOTICE ================= */
+
+.notice-box {
+  background: #f4faf7;
+  border-left: 5px solid #075b3b;
+  padding: 15px 18px;
+  border-radius: 8px;
+}
+
+.notice-box h3 {
+  margin-top: 0;
+  color: #075b3b;
+}
+
+
+/* ================= RESULT SEARCH ================= */
+
+.result-search {
+  background: #f5f9f7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.result-search label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #173b2c;
+}
+
+.result-search select,
+.result-search input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccd8d2;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.result-search select:focus,
+.result-search input:focus {
+  border-color: #075b3b;
+}
+
+
+/* RESULT BUTTON */
+
+.result-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #075b3b;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.result-button:hover {
+  background: #064b31;
+}
+
+
+/* ================= RESULT MESSAGE ================= */
+
+.result-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #b42318;
+}
+
+
+/* ================= RESULT CARD ================= */
+
+.result-card {
+  margin-top: 22px;
+  background: white;
+  border: 1px solid #dce5df;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.result-header {
+  background: #075b3b;
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+}
+
+.result-header h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+
+.result-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+
+/* ================= STUDENT INFO ================= */
+
+.student-info {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px 25px;
+  background: #f8fbf9;
+}
+
+.student-info p {
+  margin: 7px 0;
+  color: #173b2c;
+}
+
+.student-info strong {
+  color: #075b3b;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+th,
+td {
+  border: 1px solid #d8e2dc;
+  padding: 11px 8px;
+  text-align: center;
+}
+
+th {
+  background: #075b3b;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background: white;
+}
+
+tr:nth-child(even) td {
+  background: #f7faf8;
+}
+
+
+/* ================= RESULT SUMMARY ================= */
+
+.result-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 18px;
+  background: #f5f9f7;
+}
+
+.result-summary div {
+  background: white;
+  border: 1px solid #dce5df;
+  border-radius: 9px;
+  padding: 13px 8px;
+  text-align: center;
+}
+
+.result-summary span {
+  display: block;
+  font-size: 13px;
+  color: #66756e;
+  margin-bottom: 5px;
+}
+
+.result-summary strong {
+  display: block;
+  font-size: 18px;
+  color: #075b3b;
+}
+
+
+/* ================= PRINT BUTTON ================= */
+
+.print-button {
+  display: block;
+  margin: 18px auto;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 8px;
+  background: #075b3b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #064b31;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 28px;
+  color: #66756e;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    margin: 12px;
+    padding: 18px;
+  }
+
+  .student-info {
+    grid-template-columns: 1fr;
+  }
+
+  .result-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-summary div:last-child {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .topbar,
+  #drawer,
+  .grid,
+  #notice,
+  #admission,
+  #routine,
+  #diary,
+  #teacher,
+  #calendar,
+  #board,
+  #achievement,
+  .result-search,
+  .result-message,
+  .print-button,
+  footer {
+    display: none !important;
+  }
+
+  .section {
+    display: block !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .result-card {
+    display: block !important;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .result-header {
+    background: white;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+
+  th {
+    background: #eee !important;
+    color: black !important;
+  }
+
+  }
