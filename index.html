@@ -47,6 +47,14 @@
 
       <form id="resultForm" novalidate>
         <div class="field select-field">
+          <label for="resultYear">📅 সাল নির্বাচন করুন <b>*</b></label>
+          <select id="resultYear" required>
+            <option value="">-- সাল নির্বাচন করুন --</option>
+          </select>
+          <span class="field-help">যে সালের ফলাফল দেখতে চান সেটি নির্বাচন করুন</span>
+        </div>
+
+        <div class="field select-field">
           <label for="exam">📋 পরীক্ষা নির্বাচন করুন <b>*</b></label>
           <select id="exam" required>
             <option value="">-- পরীক্ষা নির্বাচন করুন --</option>
@@ -62,16 +70,9 @@
           <span class="field-help" id="classHelp">প্রথমে পরীক্ষা নির্বাচন করুন</span>
         </div>
 
-        <div class="grid-2">
-          <div class="field">
-            <label for="roll">রোল নম্বর <b>*</b></label>
-            <input id="roll" type="text" inputmode="numeric" placeholder="যেমন: 101" required>
-          </div>
-
-          <div class="field">
-            <label for="reg">রেজিস্ট্রেশন নম্বর (যদি থাকে)</label>
-            <input id="reg" type="text" inputmode="numeric" placeholder="যেমন: 2026001">
-          </div>
+        <div class="field">
+          <label for="roll">রোল নম্বর <b>*</b></label>
+          <input id="roll" type="text" inputmode="numeric" placeholder="যেমন: 101" required>
         </div>
 
         <div class="actions">
@@ -88,9 +89,8 @@
     <section id="notice" class="info-card">
       <h3>📢 ফলাফল দেখার নির্দেশনা</h3>
       <ul>
-        <li>সঠিক পরীক্ষা ও শ্রেণি নির্বাচন করুন।</li>
+        <li>প্রথমে সাল, তারপর পরীক্ষা ও শ্রেণি নির্বাচন করুন।</li>
         <li>রোল নম্বর ইংরেজি সংখ্যায় লিখুন।</li>
-        <li>রেজিস্ট্রেশন নম্বর থাকলে সেটিও দিন।</li>
         <li>তথ্য না মিললে মাদ্রাসা কর্তৃপক্ষের সঙ্গে যোগাযোগ করুন।</li>
       </ul>
     </section>
