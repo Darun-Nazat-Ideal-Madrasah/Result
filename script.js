@@ -1,6 +1,7 @@
 // ফলাফল ডাটা: প্রথম ও দ্বিতীয় সাময়িক পরীক্ষা
 const students = [
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -45,6 +46,7 @@ const students = [
     "rank": "1ম"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -89,6 +91,7 @@ const students = [
     "rank": "2য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -133,6 +136,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -177,6 +181,7 @@ const students = [
     "rank": "3য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -221,6 +226,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -265,6 +271,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -309,6 +316,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -353,6 +361,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -397,6 +406,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -441,6 +451,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -485,6 +496,7 @@ const students = [
     "rank": 15
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -529,6 +541,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -573,6 +586,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -617,6 +631,7 @@ const students = [
     "rank": 21
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -661,6 +676,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -705,6 +721,7 @@ const students = [
     "rank": 17
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -749,6 +766,7 @@ const students = [
     "rank": 18
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -793,6 +811,7 @@ const students = [
     "rank": 20
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -837,6 +856,7 @@ const students = [
     "rank": 22
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -881,6 +901,7 @@ const students = [
     "rank": 21
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -925,6 +946,7 @@ const students = [
     "rank": 23
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -969,6 +991,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -1013,6 +1036,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-প্রথম",
@@ -1057,6 +1081,7 @@ const students = [
     "rank": 19
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1109,6 +1134,7 @@ const students = [
     "rank": "2য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1161,6 +1187,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1213,6 +1240,7 @@ const students = [
     "rank": "3য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1265,6 +1293,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1317,6 +1346,7 @@ const students = [
     "rank": "1ম"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1369,6 +1399,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1421,6 +1452,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1473,6 +1505,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1525,6 +1558,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1577,6 +1611,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1629,6 +1664,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1681,6 +1717,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1733,6 +1770,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1785,6 +1823,7 @@ const students = [
     "rank": 15
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1837,6 +1876,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1852,6 +1892,7 @@ const students = [
     "rank": "অনুপস্থিত"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1904,6 +1945,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-দ্বিতীয়",
@@ -1956,6 +1998,7 @@ const students = [
     "rank": 17
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2008,6 +2051,7 @@ const students = [
     "rank": "1ম"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2060,6 +2104,7 @@ const students = [
     "rank": "2য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2112,6 +2157,7 @@ const students = [
     "rank": "3য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2164,6 +2210,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2216,6 +2263,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2268,6 +2316,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-তৃতীয়",
@@ -2320,6 +2369,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2368,6 +2418,7 @@ const students = [
     "rank": "3য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2416,6 +2467,7 @@ const students = [
     "rank": "1ম"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2464,6 +2516,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2512,6 +2565,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2560,6 +2614,7 @@ const students = [
     "rank": "2য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2608,6 +2663,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2656,6 +2712,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2704,6 +2761,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2752,6 +2810,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2800,6 +2859,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-চতুর্থ",
@@ -2848,6 +2908,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-পঞ্চম",
@@ -2892,6 +2953,7 @@ const students = [
     "rank": "2য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-পঞ্চম",
@@ -2936,6 +2998,7 @@ const students = [
     "rank": "3য়"
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-পঞ্চম",
@@ -2980,6 +3043,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-পঞ্চম",
@@ -3024,6 +3088,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "First Term Exam",
     "examBn": "প্রথম সাময়িক পরীক্ষা",
     "className": "শ্রেণি-পঞ্চম",
@@ -3068,6 +3133,7 @@ const students = [
     "rank": "1ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3116,6 +3182,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3164,6 +3231,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3212,6 +3280,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3260,6 +3329,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3308,6 +3378,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3356,6 +3427,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3404,6 +3476,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3452,6 +3525,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3500,6 +3574,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3548,6 +3623,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3596,6 +3672,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3644,6 +3721,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3692,6 +3770,7 @@ const students = [
     "rank": 15
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3740,6 +3819,7 @@ const students = [
     "rank": 18
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3788,6 +3868,7 @@ const students = [
     "rank": 17
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3836,6 +3917,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3884,6 +3966,7 @@ const students = [
     "rank": 20
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3932,6 +4015,7 @@ const students = [
     "rank": 22
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -3980,6 +4064,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4028,6 +4113,7 @@ const students = [
     "rank": 21
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4076,6 +4162,7 @@ const students = [
     "rank": 22
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4124,6 +4211,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4172,6 +4260,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4220,6 +4309,7 @@ const students = [
     "rank": 19
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4240,6 +4330,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4260,6 +4351,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4280,6 +4372,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4300,6 +4393,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4320,6 +4414,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4340,6 +4435,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-1",
@@ -4360,6 +4456,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4412,6 +4509,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4464,6 +4562,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4516,6 +4615,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4568,6 +4668,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4620,6 +4721,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4672,6 +4774,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4724,6 +4827,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4776,6 +4880,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4828,6 +4933,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4880,6 +4986,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4932,6 +5039,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -4984,6 +5092,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5036,6 +5145,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5088,6 +5198,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5140,6 +5251,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5192,6 +5304,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5244,6 +5357,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5296,6 +5410,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5316,6 +5431,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5336,6 +5452,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5356,6 +5473,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5376,6 +5494,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5396,6 +5515,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5416,6 +5536,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
@@ -5436,6 +5557,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5488,6 +5610,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5540,6 +5663,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5592,6 +5716,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5644,6 +5769,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5696,6 +5822,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5748,6 +5875,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5763,6 +5891,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5783,6 +5912,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5803,6 +5933,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5823,6 +5954,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5843,6 +5975,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5863,6 +5996,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5883,6 +6017,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
@@ -5903,6 +6038,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -5947,6 +6083,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -5991,6 +6128,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6035,6 +6173,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6079,6 +6218,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6123,6 +6263,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6167,6 +6308,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6211,6 +6353,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6255,6 +6398,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6299,6 +6443,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6343,6 +6488,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6387,6 +6533,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6407,6 +6554,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6427,6 +6575,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6447,6 +6596,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6467,6 +6617,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6487,6 +6638,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6507,6 +6659,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-4",
@@ -6527,6 +6680,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6571,6 +6725,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6615,6 +6770,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6659,6 +6815,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6703,6 +6860,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6747,6 +6905,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6767,6 +6926,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6787,6 +6947,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6807,6 +6968,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6827,6 +6989,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6847,6 +7010,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6867,6 +7031,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
@@ -6887,6 +7052,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -6939,6 +7105,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -6991,6 +7158,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7043,6 +7211,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7095,6 +7264,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7147,6 +7317,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7199,6 +7370,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7251,6 +7423,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7303,6 +7476,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7355,6 +7529,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7407,6 +7582,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7459,6 +7635,7 @@ const students = [
     "rank": 15
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7511,6 +7688,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7563,6 +7741,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7615,6 +7794,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7667,6 +7847,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7719,6 +7900,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7739,6 +7921,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7759,6 +7942,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7779,6 +7963,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7799,6 +7984,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7819,6 +8005,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7839,6 +8026,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-6",
@@ -7859,6 +8047,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -7899,6 +8088,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -7939,6 +8129,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -7979,6 +8170,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8019,6 +8211,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8059,6 +8252,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8099,6 +8293,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8139,6 +8334,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8179,6 +8375,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8219,6 +8416,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8259,6 +8457,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8299,6 +8498,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8339,6 +8539,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8379,6 +8580,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8419,6 +8621,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8439,6 +8642,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8459,6 +8663,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8479,6 +8684,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8499,6 +8705,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8519,6 +8726,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8539,6 +8747,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
@@ -8559,6 +8768,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8591,6 +8801,7 @@ const students = [
     "rank": 6
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8623,6 +8834,7 @@ const students = [
     "rank": 7
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8655,6 +8867,7 @@ const students = [
     "rank": 4
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8687,6 +8900,7 @@ const students = [
     "rank": "১ম"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8719,6 +8933,7 @@ const students = [
     "rank": "২য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8751,6 +8966,7 @@ const students = [
     "rank": 10
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8783,6 +8999,7 @@ const students = [
     "rank": 8
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8815,6 +9032,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8847,6 +9065,7 @@ const students = [
     "rank": 5
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8862,6 +9081,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8894,6 +9114,7 @@ const students = [
     "rank": 17
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8926,6 +9147,7 @@ const students = [
     "rank": 9
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8941,6 +9163,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -8973,6 +9196,7 @@ const students = [
     "rank": "৩য়"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9005,6 +9229,7 @@ const students = [
     "rank": 14
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9037,6 +9262,7 @@ const students = [
     "rank": 20
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9069,6 +9295,7 @@ const students = [
     "rank": 13
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9101,6 +9328,7 @@ const students = [
     "rank": 24
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9133,6 +9361,7 @@ const students = [
     "rank": 16
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9165,6 +9394,7 @@ const students = [
     "rank": 15
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9197,6 +9427,7 @@ const students = [
     "rank": 23
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9229,6 +9460,7 @@ const students = [
     "rank": 11
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9261,6 +9493,7 @@ const students = [
     "rank": 12
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9293,6 +9526,7 @@ const students = [
     "rank": 21
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9325,6 +9559,7 @@ const students = [
     "rank": 25
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9357,6 +9592,7 @@ const students = [
     "rank": 22
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9389,6 +9625,7 @@ const students = [
     "rank": 19
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9421,6 +9658,7 @@ const students = [
     "rank": 18
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9441,6 +9679,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9461,6 +9700,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9481,6 +9721,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9501,6 +9742,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9521,6 +9763,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9541,6 +9784,7 @@ const students = [
     "rank": "—"
   },
   {
+    "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Hifz",
@@ -9562,6 +9806,7 @@ const students = [
   }
 ];
 
+const yearSelect = document.getElementById("resultYear");
 const exam = document.getElementById("exam");
 const className = document.getElementById("className");
 const form = document.getElementById("resultForm");
@@ -9586,35 +9831,58 @@ function esc(v){
   return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
 }
 
-function loadFilters(){
-  const exams=unique(students.map(s=>s.exam)).map(e=>({
-    value:e,
-    label:students.find(s=>s.exam===e).examBn
-  }));
-  fillSelect(exam,exams,"-- পরীক্ষা নির্বাচন করুন --");
+function getYears(){
+  return unique(students.map(s => String(s.year || "2026"))).sort((a,b)=>Number(b)-Number(a));
+}
+
+function loadYears(){
+  fillSelect(yearSelect, getYears().map(y => ({value:y,label:bnNum(y)})), "-- সাল নির্বাচন করুন --");
+  exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
+  exam.disabled=true;
   className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
   className.disabled=true;
   const help=document.getElementById("classHelp");
-  if(help) help.textContent="প্রথমে পরীক্ষা নির্বাচন করুন";
+  if(help) help.textContent="প্রথমে সাল নির্বাচন করুন";
 }
+
+function loadExams(){
+  const y=yearSelect.value;
+  if(!y){
+    exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
+    exam.disabled=true;
+    className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
+    className.disabled=true;
+    return;
+  }
+  const exams=unique(students.filter(s=>String(s.year||"2026")===y).map(s=>s.exam)).map(e=>({
+    value:e,
+    label:students.find(s=>String(s.year||"2026")===y&&s.exam===e).examBn
+  }));
+  fillSelect(exam,exams,"-- পরীক্ষা নির্বাচন করুন --");
+  exam.disabled=exams.length===0;
+  className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
+  className.disabled=true;
+  const help=document.getElementById("classHelp");
+  if(help) help.textContent=exams.length ? "পরীক্ষা নির্বাচন করুন" : "এই সালের কোনো পরীক্ষার ফলাফল নেই";
+}
+
+yearSelect.addEventListener("change", loadExams);
 
 exam.addEventListener("change",()=>{
   const help=document.getElementById("classHelp");
-
-  if(!exam.value){
+  const y=yearSelect.value;
+  if(!y||!exam.value){
     className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
     className.disabled=true;
     if(help) help.textContent="প্রথমে পরীক্ষা নির্বাচন করুন";
     return;
   }
-
   const classes=unique(
-    students.filter(s=>s.exam===exam.value).map(s=>s.className)
+    students.filter(s=>String(s.year||"2026")===y&&s.exam===exam.value).map(s=>s.className)
   ).map(c=>{
-    const f=students.find(s=>s.exam===exam.value&&s.className===c);
+    const f=students.find(s=>String(s.year||"2026")===y&&s.exam===exam.value&&s.className===c);
     return {value:c,label:f.classBn};
   });
-
   fillSelect(className,classes,"-- শ্রেণি নির্বাচন করুন --");
   className.disabled = classes.length === 0;
   if(help) help.textContent = classes.length
@@ -9631,12 +9899,11 @@ function showResult(s){
   const avg=s.average==null?'—':bnNum(Number(s.average).toFixed(2));
   const point=s.point==null?'—':bnNum(Number(s.point).toFixed(2));
   resultArea.innerHTML=`
-    <div class="result-head"><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>${esc(s.examBn)} — ${esc(s.classBn)}</p></div>
+    <div class="result-head"><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn)} — ${esc(s.classBn)}</p></div>
     <div class="student-info">
       <div class="info-box"><small>পরীক্ষার্থীর নাম</small><strong>${esc(s.name)}</strong></div>
       <div class="info-box"><small>শ্রেণি</small><strong>${esc(s.classBn)}</strong></div>
       <div class="info-box"><small>রোল নম্বর</small><strong>${bnNum(s.roll)}</strong></div>
-      <div class="info-box"><small>রেজিস্ট্রেশন</small><strong>${s.reg?esc(s.reg):'—'}</strong></div>
     </div>
     <div class="table-wrap"><table class="result-table">
       <thead><tr><th>ক্রম</th><th>বিষয়</th><th>নম্বর</th></tr></thead><tbody>${rows}</tbody>
@@ -9656,19 +9923,24 @@ function showResult(s){
 form.addEventListener("submit",e=>{
   e.preventDefault();
   resultArea.classList.add("hidden"); message.className="message hidden";
-  const ev=exam.value, cv=className.value, roll=document.getElementById("roll").value.trim();
-  if(!ev||!cv||!roll){message.textContent="অনুগ্রহ করে পরীক্ষা, শ্রেণি ও রোল নম্বর পূরণ করুন।";message.className="message error";return;}
-  const s=students.find(x=>x.exam===ev&&x.className===cv&&String(x.roll)===roll);
+  const y=yearSelect.value, ev=exam.value, cv=className.value, roll=document.getElementById("roll").value.trim();
+  if(!y||!ev||!cv||!roll){message.textContent="অনুগ্রহ করে সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর পূরণ করুন।";message.className="message error";return;}
+  const s=students.find(x=>String(x.year||"2026")===y&&x.exam===ev&&x.className===cv&&String(x.roll)===roll);
   if(!s){message.textContent="দুঃখিত! এই রোল নম্বরের কোনো ফলাফল পাওয়া যায়নি।";message.className="message error";return;}
   message.textContent="ফলাফল পাওয়া গেছে।";message.className="message success";showResult(s);
 });
 form.addEventListener("reset",()=>setTimeout(()=>{
+  yearSelect.innerHTML='<option value="">-- সাল নির্বাচন করুন --</option>';
+  exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
+  exam.disabled=true;
   className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
   className.disabled=true;
   const help=document.getElementById("classHelp");
-  if(help) help.textContent="প্রথমে পরীক্ষা নির্বাচন করুন";
+  if(help) help.textContent="প্রথমে সাল নির্বাচন করুন";
   message.className="message hidden";
   resultArea.classList.add("hidden");
 },0));
+document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
+loadYears();
 document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
 loadFilters();
