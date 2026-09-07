@@ -1,52 +1,582 @@
-<!doctype html>
+password <!doctype html>
 <html lang="bn">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>দারিন-নাজার মাদরাসা</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
   <div class="topbar">
     <button class="menu" onclick="toggleMenu()">☰</button>
-    <div class="brand">দারিন-নাজার মাদরাসা</div>
+
+    <div class="brand">
+      দারিন-নাজার মাদরাসা
+    </div>
+
     <div class="badge">DN</div>
   </div>
 </header>
+
+
+<!-- SIDE MENU -->
+
 <nav id="drawer">
-  <div class="drawer-title">দারিন-নাজার মাদরাসা</div>
+
+  <div class="drawer-title">
+    দারিন-নাজার মাদরাসা
+  </div>
+
   <a href="#home">🏠 Dashboard</a>
+
   <a href="#board">🏆 বোর্ড পরীক্ষার সাফল্য</a>
+
   <a href="#achievement">🥇 প্রতিযোগিতার সাফল্য</a>
+
   <a href="#notice">📢 নোটিশ</a>
+
   <a href="#result">🎓 পরীক্ষার ফলাফল</a>
+
   <a href="#diary">📄 Daily Diary</a>
+
   <a href="#teacher">📣 Teacher's Observation</a>
+
   <a href="#admission">📝 ভর্তির জন্য আবেদন</a>
+
   <a href="#calendar">📅 Academic Calendar</a>
+
   <a href="#routine">🗓️ Class Routine</a>
+
 </nav>
+
+
 <main id="home">
-  <section class="hero">
-    <h1>দারিন-নাজার মাদরাসা</h1>
-    <p>জ্ঞান, নৈতিকতা ও আদর্শ শিক্ষার সমন্বিত প্রতিষ্ঠান</p>
-  </section>
-  <section class="grid">
-    <a class="card" href="#notice"><span>📢</span><b>নোটিশ</b><small>সর্বশেষ নোটিশ দেখুন</small></a>
-    <a class="card" href="#result"><span>🎓</span><b>পরীক্ষার ফলাফল</b><small>রোল দিয়ে ফলাফল দেখুন</small></a>
-    <a class="card" href="#admission"><span>📝</span><b>ভর্তি আবেদন</b><small>অনলাইনে আবেদন করুন</small></a>
-    <a class="card" href="#routine"><span>🗓️</span><b>ক্লাস রুটিন</b><small>শ্রেণিভিত্তিক রুটিন</small></a>
-  </section>
-  <section id="notice" class="section"><h2>📢 সর্বশেষ নোটিশ</h2><p>এখানে মাদরাসার গুরুত্বপূর্ণ নোটিশ প্রকাশ করা হবে।</p></section>
-  <section id="result" class="section"><h2>🎓 পরীক্ষার ফলাফল</h2><p>ফলাফল সিস্টেম পরবর্তী ধাপে ডাটাবেজসহ যুক্ত করা হবে।</p></section>
-  <section id="admission" class="section"><h2>📝 ভর্তি আবেদন</h2><p>অনলাইন ভর্তি ফরম পরবর্তী ধাপে যুক্ত করা হবে।</p></section>
-  <section id="routine" class="section"><h2>🗓️ Class Routine</h2><p>শ্রেণিভিত্তিক রুটিন এখানে দেখানো হবে।</p></section>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h1>
+    দারিন-নাজার মাদরাসা
+  </h1>
+
+  <p>
+    জ্ঞান, নৈতিকতা ও আদর্শ শিক্ষার সমন্বিত প্রতিষ্ঠান
+  </p>
+
+</section>
+
+
+<!-- HOME CARDS -->
+
+<section class="grid">
+
+  <a class="card" href="#notice">
+
+    <span>📢</span>
+
+    <b>নোটিশ</b>
+
+    <small>
+      সর্বশেষ নোটিশ দেখুন
+    </small>
+
+  </a>
+
+
+  <a class="card" href="#result">
+
+    <span>🎓</span>
+
+    <b>পরীক্ষার ফলাফল</b>
+
+    <small>
+      রোল দিয়ে ফলাফল দেখুন
+    </small>
+
+  </a>
+
+
+  <a class="card" href="#admission">
+
+    <span>📝</span>
+
+    <b>ভর্তি আবেদন</b>
+
+    <small>
+      অনলাইনে আবেদন করুন
+    </small>
+
+  </a>
+
+
+  <a class="card" href="#routine">
+
+    <span>🗓️</span>
+
+    <b>ক্লাস রুটিন</b>
+
+    <small>
+      শ্রেণিভিত্তিক রুটিন
+    </small>
+
+  </a>
+
+</section>
+
+
+
+<!-- NOTICE -->
+
+<section id="notice" class="section">
+
+  <h2>
+    📢 সর্বশেষ নোটিশ
+  </h2>
+
+  <div class="notice-box">
+
+    <h3>
+      গুরুত্বপূর্ণ নোটিশ
+    </h3>
+
+    <p>
+      এখানে মাদরাসার গুরুত্বপূর্ণ নোটিশ প্রকাশ করা হবে।
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- RESULT -->
+
+<section id="result" class="section result-section">
+
+  <h2>
+    🎓 পরীক্ষার ফলাফল
+  </h2>
+
+  <p>
+    পরীক্ষা, শ্রেণি এবং রোল নম্বর নির্বাচন করে ফলাফল দেখুন।
+  </p>
+
+
+  <!-- RESULT SEARCH -->
+
+  <div class="result-search">
+
+    <label>
+      পরীক্ষা নির্বাচন করুন
+    </label>
+
+    <select id="examSelect">
+
+      <option value="">
+        -- পরীক্ষা নির্বাচন করুন --
+      </option>
+
+      <option value="term1">
+        1st Term Examination
+      </option>
+
+      <option value="term2">
+        2nd Term Examination
+      </option>
+
+      <option value="annual">
+        Annual Examination
+      </option>
+
+    </select>
+
+
+
+    <label>
+      শ্রেণি নির্বাচন করুন
+    </label>
+
+    <select id="classSelect">
+
+      <option value="">
+        -- শ্রেণি নির্বাচন করুন --
+      </option>
+
+      <option value="nursery">
+        Nursery
+      </option>
+
+      <option value="class1">
+        Class 1
+      </option>
+
+      <option value="class2">
+        Class 2
+      </option>
+
+      <option value="class3">
+        Class 3
+      </option>
+
+      <option value="class4">
+        Class 4
+      </option>
+
+      <option value="class5">
+        Class 5
+      </option>
+
+      <option value="class6">
+        Class 6
+      </option>
+
+      <option value="class7">
+        Class 7
+      </option>
+
+      <option value="class8">
+        Class 8
+      </option>
+
+      <option value="class9">
+        Class 9
+      </option>
+
+      <option value="class10">
+        Class 10
+      </option>
+
+      <option value="hifz">
+        Hifz
+      </option>
+
+    </select>
+
+
+
+    <label>
+      রোল নম্বর
+    </label>
+
+    <input
+      type="text"
+      id="rollInput"
+      placeholder="রোল নম্বর লিখুন"
+    >
+
+
+    <button
+      type="button"
+      onclick="searchResult()"
+      class="result-button"
+    >
+      🔍 ফলাফল দেখুন
+    </button>
+
+  </div>
+
+
+  <!-- MESSAGE -->
+
+  <div
+    id="resultMessage"
+    class="result-message"
+  ></div>
+
+
+  <!-- RESULT CARD -->
+
+  <div
+    id="resultCard"
+    class="result-card"
+    style="display:none;"
+  >
+
+    <div class="result-header">
+
+      <h2>
+        দারিন-নাজার মাদরাসা
+      </h2>
+
+      <h3>
+        পরীক্ষার ফলাফল
+      </h3>
+
+    </div>
+
+
+    <div class="student-info">
+
+      <p>
+        <strong>নাম:</strong>
+        <span id="studentName"></span>
+      </p>
+
+      <p>
+        <strong>রোল:</strong>
+        <span id="studentRoll"></span>
+      </p>
+
+      <p>
+        <strong>শ্রেণি:</strong>
+        <span id="studentClass"></span>
+      </p>
+
+      <p>
+        <strong>পরীক্ষা:</strong>
+        <span id="studentExam"></span>
+      </p>
+
+    </div>
+
+
+    <!-- MARKS TABLE -->
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>
+              ক্রম
+            </th>
+
+            <th>
+              বিষয়
+            </th>
+
+            <th>
+              নম্বর
+            </th>
+
+            <th>
+              গ্রেড
+            </th>
+
+            <th>
+              পয়েন্ট
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody id="marksTable">
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <!-- RESULT SUMMARY -->
+
+    <div class="result-summary">
+
+      <div>
+        <span>
+          মোট নম্বর
+        </span>
+
+        <strong id="totalMarks">
+          -
+        </strong>
+      </div>
+
+
+      <div>
+        <span>
+          গড়
+        </span>
+
+        <strong id="averageMarks">
+          -
+        </strong>
+      </div>
+
+
+      <div>
+        <span>
+          গ্রেড
+        </span>
+
+        <strong id="overallGrade">
+          -
+        </strong>
+      </div>
+
+
+      <div>
+        <span>
+          পয়েন্ট
+        </span>
+
+        <strong id="overallPoint">
+          -
+        </strong>
+      </div>
+
+
+      <div>
+        <span>
+          অবস্থান
+        </span>
+
+        <strong id="position">
+          -
+        </strong>
+      </div>
+
+    </div>
+
+
+    <button
+      onclick="printResult()"
+      class="print-button"
+    >
+      🖨️ ফলাফল প্রিন্ট করুন
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- ADMISSION -->
+
+<section id="admission" class="section">
+
+  <h2>
+    📝 ভর্তি আবেদন
+  </h2>
+
+  <p>
+    অনলাইন ভর্তি ফরম পরবর্তী ধাপে যুক্ত করা হবে।
+  </p>
+
+</section>
+
+
+
+<!-- ROUTINE -->
+
+<section id="routine" class="section">
+
+  <h2>
+    🗓️ Class Routine
+  </h2>
+
+  <p>
+    শ্রেণিভিত্তিক রুটিন এখানে দেখানো হবে।
+  </p>
+
+</section>
+
+
+
+<!-- DAILY DIARY -->
+
+<section id="diary" class="section">
+
+  <h2>
+    📄 Daily Diary
+  </h2>
+
+  <p>
+    শিক্ষার্থীদের দৈনিক ডায়েরি এখানে প্রকাশ করা হবে।
+  </p>
+
+</section>
+
+
+
+<!-- TEACHER -->
+
+<section id="teacher" class="section">
+
+  <h2>
+    📣 Teacher's Observation
+  </h2>
+
+  <p>
+    শিক্ষকদের পর্যবেক্ষণ এখানে প্রকাশ করা হবে।
+  </p>
+
+</section>
+
+
+
+<!-- CALENDAR -->
+
+<section id="calendar" class="section">
+
+  <h2>
+    📅 Academic Calendar
+  </h2>
+
+  <p>
+    একাডেমিক ক্যালেন্ডার এখানে প্রকাশ করা হবে।
+  </p>
+
+</section>
+
+
+
+<!-- BOARD -->
+
+<section id="board" class="section">
+
+  <h2>
+    🏆 বোর্ড পরীক্ষার সাফল্য
+  </h2>
+
+  <p>
+    মাদরাসার বোর্ড পরীক্ষার ফলাফল ও সাফল্য এখানে প্রকাশ করা হবে।
+  </p>
+
+</section>
+
+
+
+<!-- ACHIEVEMENT -->
+
+<section id="achievement" class="section">
+
+  <h2>
+    🥇 প্রতিযোগিতার সাফল্য
+  </h2>
+
+  <p>
+    বিভিন্ন প্রতিযোগিতায় শিক্ষার্থীদের সাফল্য এখানে প্রকাশ করা হবে।
+  </p>
+
+</section>
+
 </main>
-<footer>© 2026 দারিন-নাজার মাদরাসা</footer>
-<script>
-function toggleMenu(){document.getElementById('drawer').classList.toggle('open')}
-document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',()=>document.getElementById('drawer').classList.remove('open')));
-</script>
+
+
+<footer>
+
+  © 2026 দারিন-নাজার মাদরাসা
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
 </body>
-</html>
+</html>make 
