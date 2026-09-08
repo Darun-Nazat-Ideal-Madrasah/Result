@@ -270,18 +270,29 @@ select:disabled{background:#f3f5f4;color:#9aa2a8;cursor:not-allowed}
   .classwise-print-sheet .classwise-table tr{break-inside:avoid}
 }
 
-/* শ্রেণিওয়ারী ফলাফলে বিষয়ভিত্তিক নম্বর */
-.classwise-table th,.classwise-table td{text-align:center;white-space:nowrap}
-.classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left;white-space:normal}
-.classwise-print-sheet{display:none}
-@media print{
-  .classwise-output > .classwise-head,
-  .classwise-output > .table-wrap{display:none!important}
-  .classwise-output > .classwise-print-sheet{display:block!important}
-  .classwise-print-sheet .classwise-head{background:#fff!important;color:#111!important;padding:4px 0 8px!important;border:0!important}
-  .classwise-print-sheet .classwise-head img{width:45px!important;height:45px!important}
-  .classwise-print-sheet .classwise-head h2{font-size:17px!important}
-  .classwise-print-sheet .classwise-head p{font-size:10px!important}
-  .classwise-print-sheet .classwise-table th,.classwise-print-sheet .classwise-table td{font-size:8px!important;padding:3px 2px!important}
-  .classwise-print-sheet .classwise-table th:nth-child(2),.classwise-print-sheet .classwise-table td:nth-child(2){min-width:95px!important}
+
+/* Final classwise result layout */
+.classwise-table th,
+.classwise-table td{
+  text-align:center;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+.classwise-table td.student-name{
+  text-align:left;
+  white-space:normal;
+}
+.classwise-print-table-wrap{
+  overflow:visible;
+}
+
+/* ব্যক্তিগত ফলাফল: বিষয় বামে, ক্রম ও নম্বর মাঝখানে */
+.result-table:not(.classwise-table) th,
+.result-table:not(.classwise-table) td{
+  text-align:center;
+  vertical-align:middle;
+}
+.result-table:not(.classwise-table) th:nth-child(2),
+.result-table:not(.classwise-table) td:nth-child(2){
+  text-align:left;
 }

@@ -140,7 +140,7 @@ function showPersonalResult(s){
       <div class="summary-box"><span>অবস্থান</span><strong>${pos}</strong></div>
     </div>
     <div class="result-status">গ্রেড: <b>${esc(s.grade||'—')}</b> &nbsp; | &nbsp; ফলাফল: ${status}</div>
-    <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
+    <div class="print-row"><button class="print-btn" onclick="printResultArea()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
   resultArea.classList.remove("hidden");
   resultArea.scrollIntoView({behavior:"smooth",block:"start"});
 }
@@ -163,6 +163,7 @@ function showClassWiseResult(){
   const y=classYear.value, ev=classWiseExam.value, c=classWiseName.value;
   classWiseResult.classList.add("hidden");
   if(!y||!ev||!c){return;}
+
   const list=students.filter(s=>String(s.year||"")===y&&s.exam===ev&&s.className===c);
   if(!list.length){
     classWiseResult.innerHTML='<div class="classwise-empty">দুঃখিত! এই সাল ও শ্রেণির কোনো ফলাফল পাওয়া যায়নি।</div>';
@@ -171,35 +172,125 @@ function showClassWiseResult(){
   }
 
   const f=list[0];
+
+  // এই শ্রেণির সব শিক্ষার্থীর subject list থেকে কলাম তৈরি হবে।
   const subjectNames=[];
   list.forEach(s=>(s.subjects||[]).forEach(x=>{
     const name=String(x.name||"").trim();
     if(name && !subjectNames.includes(name)) subjectNames.push(name);
   }));
 
-  const subjectHeader=subjectNames.map(name=>`<th>${esc(name)}</th>`).join('');
-  const rows=list.map((s,i)=>{
-    const marks=(s.subjects||[]);
-    const cells=subjectNames.map(name=>{
-      const sub=marks.find(x=>String(x.name||"").trim()===name);
-      const mark=sub?.marks;
-      return `<td>${mark==='*'||mark==null?'—':bnNum(mark)}</td>`;
-    }).join('');
-    return `<tr><td>${bnNum(i+1)}</td><td class="student-name-cell">${esc(s.name)}</td>${cells}<td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`;
-  }).join('');
+  const headers=["ক্রম","শিক্ষার্থীর নাম",...subjectNames,"মোট","গড়","গ্রেড","অবস্থান"];
 
-  const table=`<table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th>${subjectHeader}<th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table>`;
+  const rows=list.map((s,i)=>{
+    const marks={};
+    (s.subjects||[]).forEach(x=>{
+      const n=String(x.name||"").trim();
+      if(n) marks[n]=x.marks;
+    });
+
+    const subjectCells=subjectNames.map(n=>{
+      const v=marks[n];
+      return `<td>${v==null||v===""||v==="*"?"—":bnNum(v)}</td>`;
+    }).join("");
+
+    return `<tr>
+      <td>${bnNum(i+1)}</td>
+      <td class="student-name">${esc(s.name)}</td>
+      ${subjectCells}
+      <td>${s.total==null?"—":bnNum(s.total)}</td>
+      <td>${s.average==null?"—":bnNum(Number(s.average).toFixed(2))}</td>
+      <td>${esc(s.grade||"—")}</td>
+      <td>${typeof s.rank==="number"?bnNum(s.rank):esc(s.rank||"—")}</td>
+    </tr>`;
+  }).join("");
+
+  const headHtml=`
+    <div class="classwise-head">
+      <img src="logo.jpg" alt="মাদ্রাসার লোগো">
+      <div>
+        <h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2>
+        <p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p>
+      </div>
+    </div>`;
+
+  const tableHtml=`
+    <div class="table-wrap classwise-print-table-wrap">
+      <table class="result-table classwise-table">
+        <thead><tr>${headers.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
 
   classWiseResult.innerHTML=`
-    <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
-    <div class="table-wrap">${table}</div>
-    <div class="classwise-print-sheet" aria-hidden="true">
-      <div class="print-header classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
-      <div class="classwise-print-table-wrap">${table}</div>
-    </div>
-    <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
+    ${headHtml}
+    ${tableHtml}
+    <div class="print-row">
+      <button class="print-btn" onclick="printClassWiseResult()">🖨 ফলাফল প্রিন্ট / PDF</button>
+    </div>`;
+
   classWiseResult.classList.remove("hidden");
   classWiseResult.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function openPrintWindow(htmlContent,title){
+  const win=window.open("", "_blank");
+  if(!win){
+    // Popup blocked হলে স্বাভাবিক print fallback।
+    window.print();
+    return;
+  }
+
+  const links=Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map(l=>`<link rel="stylesheet" href="${l.href}">`).join("");
+
+  win.document.open();
+  win.document.write(`<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(title)}</title>
+${links}
+<style>
+@page{size:A4 portrait;margin:8mm}
+@page classwisePage{size:A4 landscape;margin:7mm}
+html,body{background:#fff!important;color:#111!important;margin:0!important;padding:0!important}
+body{font-family:'Noto Sans Bengali',Arial,sans-serif!important}
+.result-head,.classwise-head{break-inside:avoid}
+.table-wrap{overflow:visible!important}
+.result-table{width:100%!important;border-collapse:collapse!important}
+.result-table th,.result-table td{border:1px solid #222!important}
+.print-row{display:none!important}
+@media print{
+  .result-card,.info-card,.contact-card,footer,.top-header,.print-row{display:none!important}
+}
+</style>
+</head>
+<body>
+${htmlContent}
+<script>
+(function(){
+  function doPrint(){
+    try{window.focus();window.print();}catch(e){}
+  }
+  if(document.readyState==="complete"){setTimeout(doPrint,500);}
+  else{window.addEventListener("load",function(){setTimeout(doPrint,500);});}
+})();
+<\/script>
+</body>
+</html>`);
+  win.document.close();
+}
+
+function printResultArea(){
+  if(!resultArea || resultArea.classList.contains("hidden")) return;
+  openPrintWindow(resultArea.innerHTML,"ব্যক্তিগত ফলাফল");
+}
+
+function printClassWiseResult(){
+  if(!classWiseResult || classWiseResult.classList.contains("hidden")) return;
+  openPrintWindow(classWiseResult.innerHTML,"শ্রেণিভিত্তিক ফলাফল");
 }
 
 document.getElementById("classWiseForm").addEventListener("submit",e=>{
