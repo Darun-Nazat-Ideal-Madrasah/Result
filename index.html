@@ -1,67 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="দারুন নাজাত আইডিয়াল মাদ্রাসার অনলাইন ফলাফল">
-<title>দারুন নাজাত আইডিয়াল মাদ্রাসা | অনলাইন ফলাফল</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f4e">
+  <meta name="description" content="মাদ্রাসার পরীক্ষার ফলাফল দেখুন">
+  <title>দারুন নাজাত আইডিয়াল মাদ্রাসা — ফলাফল</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <img class="header-image" src="assets/header.png" alt="দারুন নাজাত আইডিয়াল মাদ্রাসা">
-  </div>
-</header>
-
-<main class="container">
-  <section class="search-area">
-    <div class="section-label">ONLINE RESULT PORTAL</div>
-    <h1>আপনার ফলাফল দেখুন</h1>
-    <p class="subtitle">সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর নির্বাচন করে ফলাফল দেখুন</p>
-
-    <form id="resultForm" class="search-card">
-      <div class="field">
-        <label for="year">সাল</label>
-        <select id="year" required></select>
-      </div>
-      <div class="field">
-        <label for="exam">পরীক্ষা</label>
-        <select id="exam" required></select>
-      </div>
-      <div class="field">
-        <label for="classSelect">শ্রেণি</label>
-        <select id="classSelect" required></select>
-      </div>
-      <div class="field">
-        <label for="roll">রোল নম্বর</label>
-        <input id="roll" type="number" min="1" inputmode="numeric" placeholder="রোল নম্বর লিখুন" required>
-      </div>
-      <button class="search-button" type="submit">ফলাফল দেখুন</button>
-    </form>
-    <div id="message" class="message" hidden></div>
-  </section>
-
-  <section id="resultSection" class="result-section" hidden>
-    <div class="result-heading">
-      <div>
-        <div class="section-label">RESULT</div>
-        <h2>শিক্ষার্থীর ফলাফল</h2>
-      </div>
-      <button id="printButton" class="print-button" type="button">🖨 প্রিন্ট</button>
+  <header class="top-header">
+    <div class="nav container">
+      <a class="brand" href="#" aria-label="হোম">
+        <div class="logo">📚</div>
+        <div class="brand-text">
+          <strong>দারুন নাজাত আইডিয়াল মাদ্রাসা</strong>
+          <span>ফলাফল প্রকাশনা</span>
+        </div>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="মেনু">☰</button>
+      <nav id="mobileMenu">
+        <a href="#search">ফলাফল</a>
+        <a href="#notice">নির্দেশনা</a>
+        <a href="#about">যোগাযোগ</a>
+      </nav>
     </div>
-    <div id="result"></div>
-  </section>
 
-  <section class="notice">
-    <strong>নোট:</strong> ফলাফল না পেলে সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর সঠিকভাবে নির্বাচন করুন।
-  </section>
-</main>
+    <div class="hero">
+      <div class="container">
+        <h1>দারুন নাজাত আইডিয়াল মাদ্রাসা</h1>
+        <p>জ্ঞান, নৈতিকতা ও আদর্শ শিক্ষার সমন্বিত প্রতিষ্ঠান</p>
+        <small>পরীক্ষার ফলাফল অনলাইনে দেখুন</small>
+      </div>
+    </div>
+  </header>
 
-<footer>
-  <div>সঠিক ফলাফল • উজ্জ্বল ভবিষ্যৎ</div>
-  <small>© ২০২৬ দারুন নাজাত আইডিয়াল মাদ্রাসা</small>
-</footer>
-<script src="script.js"></script>
+  <main class="container main">
+    <section class="result-card" id="search">
+      <div class="section-title">
+        <span class="title-icon">🎓</span>
+        <div>
+          <h2>ফলাফল অনুসন্ধান</h2>
+          <p>তথ্য পূরণ করে ফলাফল দেখুন</p>
+        </div>
+      </div>
+
+      <form id="resultForm" novalidate>
+        <div class="field select-field">
+          <label for="resultYear">📅 সাল নির্বাচন করুন <b>*</b></label>
+          <select id="resultYear" required>
+            <option value="">-- সাল নির্বাচন করুন --</option>
+          </select>
+          <span class="field-help">যে সালের ফলাফল দেখতে চান সেটি নির্বাচন করুন</span>
+        </div>
+
+        <div class="field select-field">
+          <label for="exam">📋 পরীক্ষা নির্বাচন করুন <b>*</b></label>
+          <select id="exam" required>
+            <option value="">-- পরীক্ষা নির্বাচন করুন --</option>
+          </select>
+          <span class="field-help">যে পরীক্ষার ফলাফল দেখতে চান সেটি নির্বাচন করুন</span>
+        </div>
+
+        <div class="field select-field">
+          <label for="className">🎓 শ্রেণি নির্বাচন করুন <b>*</b></label>
+          <select id="className" required disabled>
+            <option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>
+          </select>
+          <span class="field-help" id="classHelp">প্রথমে পরীক্ষা নির্বাচন করুন</span>
+        </div>
+
+        <div class="field">
+          <label for="roll">রোল নম্বর <b>*</b></label>
+          <input id="roll" type="text" inputmode="numeric" placeholder="যেমন: 101" required>
+        </div>
+
+        <div class="actions">
+          <button type="reset" class="btn btn-light">↻ পুনরায় সেট করুন</button>
+          <button type="submit" class="btn btn-primary">🔎 অনুসন্ধান করুন</button>
+        </div>
+      </form>
+
+      <div id="message" class="message hidden"></div>
+    </section>
+
+    <section id="resultArea" class="result-output hidden"></section>
+
+    <section id="notice" class="info-card">
+      <h3>📢 ফলাফল দেখার নির্দেশনা</h3>
+      <ul>
+        <li>প্রথমে সাল, তারপর পরীক্ষা ও শ্রেণি নির্বাচন করুন।</li>
+        <li>রোল নম্বর ইংরেজি সংখ্যায় লিখুন।</li>
+        <li>তথ্য না মিললে মাদ্রাসা কর্তৃপক্ষের সঙ্গে যোগাযোগ করুন।</li>
+      </ul>
+    </section>
+
+    <section id="about" class="contact-card">
+      <div>
+        <h3>যোগাযোগ</h3>
+        <p>মাদ্রাসার অফিসে যোগাযোগ করুন</p>
+      </div>
+      <div class="contact-items">
+        <a href="tel:01623257140">📞 01623257140</a>
+        <span>📍 আবুতোরাব, মিরসরাই, চট্টগ্রাম</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> দারুন নাজাত আইডিয়াল মাদ্রাসা
+      <div class="footer-sub">সকল অধিকার সংরক্ষিত</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
