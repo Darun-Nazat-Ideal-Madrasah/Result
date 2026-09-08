@@ -6773,32 +6773,61 @@ classWiseName.addEventListener("change",()=>{
   classWiseResult.classList.add("hidden");
 });
 
+function gradeChartHtml(){
+  return `<div class="grade-chart"><div class="grade-chart-title">গ্রেড নির্ণয়</div><div class="grade-grid">
+    <span>৮০-১০০</span><b>A+</b><em>৫.০০</em>
+    <span>৭০-৭৯</span><b>A</b><em>৪.০০</em>
+    <span>৬০-৬৯</span><b>A-</b><em>৩.৫০</em>
+    <span>৫০-৫৯</span><b>B</b><em>৩.০০</em>
+    <span>৪০-৪৯</span><b>C</b><em>২.০০</em>
+    <span>৩৩-৩৯</span><b>D</b><em>১.০০</em>
+    <span>০-৩২</span><b>F</b><em>০.০০</em>
+  </div></div>`;
+}
+
+function printHeader(title, subtitle){
+  return `<div class="print-header">
+    <div class="print-logo-wrap"><img src="logo.jpg" alt="মাদ্রাসার লোগো"></div>
+    <div class="print-title"><h1>দারুন নাজাত আইডিয়াল মাদ্রাসা</h1><h2>${esc(title)}</h2><p>${esc(subtitle)}</p></div>
+  </div>`;
+}
+
 function showPersonalResult(s){
-  const rows=(s.subjects||[]).map((x,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(x.name)}</td><td>${x.marks==='*'?'—':bnNum(x.marks)}</td></tr>`).join("");
+  const rows=(s.subjects||[]).map((x,i)=>`<tr><td>${bnNum(i+1)}</td><td class="subject-name">${esc(x.name)}</td><td>${x.marks==='*'?'—':bnNum(x.marks)}</td></tr>`).join("");
   const pos=typeof s.rank === "number" ? bnNum(s.rank) : esc(s.rank || "—");
   const absent=s.grade==='অনুপস্থিত' || !(s.subjects||[]).some(x=>typeof x.marks==='number');
   const status=absent ? '<span class="fail">অনুপস্থিত / অসম্পূর্ণ</span>' : (s.grade==='F' ? '<span class="fail">ফেল</span>' : '<span class="pass">উত্তীর্ণ</span>');
   const total=s.total==null?'—':bnNum(s.total);
   const avg=s.average==null?'—':bnNum(Number(s.average).toFixed(2));
   const point=s.point==null?'—':bnNum(Number(s.point).toFixed(2));
+  const subtitle=`${s.examBn || s.exam} — শ্রেণি: ${s.classBn || s.className}`;
   resultArea.innerHTML=`
-    <div class="result-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn || s.exam)} — ${esc(s.classBn || s.className)}</p></div></div>
-    <div class="student-info">
-      <div class="info-box"><small>পরীক্ষার্থীর নাম</small><strong>${esc(s.name)}</strong></div>
-      <div class="info-box"><small>শ্রেণি</small><strong>${esc(s.classBn || s.className)}</strong></div>
-      <div class="info-box"><small>রোল নম্বর</small><strong>${bnNum(s.roll)}</strong></div>
-    </div>
-    <div class="table-wrap"><table class="result-table">
-      <thead><tr><th>ক্রম</th><th>বিষয়</th><th>নম্বর</th></tr></thead><tbody>${rows}</tbody>
-    </table></div>
-    <div class="summary">
-      <div class="summary-box"><span>সর্বমোট নম্বর</span><strong>${total}</strong></div>
-      <div class="summary-box"><span>গড়</span><strong>${avg}</strong></div>
-      <div class="summary-box"><span>পয়েন্ট</span><strong>${point}</strong></div>
-      <div class="summary-box"><span>অবস্থান</span><strong>${pos}</strong></div>
-    </div>
-    <div class="result-status">গ্রেড: <b>${esc(s.grade||'—')}</b> &nbsp; | &nbsp; ফলাফল: ${status}</div>
-    <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
+    <div class="print-sheet personal-print-sheet">
+      ${printHeader('ফলাফল পত্র', `শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${subtitle}`)}
+      <div class="print-meta-row">
+        <div><span>পরীক্ষার্থীর নাম</span><strong>${esc(s.name)}</strong></div>
+        <div><span>শ্রেণি</span><strong>${esc(s.classBn || s.className)}</strong></div>
+        <div><span>রোল নম্বর</span><strong>${bnNum(s.roll)}</strong></div>
+        <div><span>পরীক্ষা</span><strong>${esc(s.examBn || s.exam)}</strong></div>
+      </div>
+      <div class="print-body-grid">
+        <div class="print-subject-area">
+          <table class="result-table print-result-table">
+            <thead><tr><th>ক্রমিক নং</th><th>বিষয়ের নাম</th><th>প্রাপ্ত নম্বর</th></tr></thead><tbody>${rows}</tbody>
+          </table>
+          <div class="summary print-summary">
+            <div class="summary-box"><span>সর্বমোট নম্বর</span><strong>${total}</strong></div>
+            <div class="summary-box"><span>গড়</span><strong>${avg}</strong></div>
+            <div class="summary-box"><span>পয়েন্ট</span><strong>${point}</strong></div>
+            <div class="summary-box"><span>অবস্থান</span><strong>${pos}</strong></div>
+          </div>
+          <div class="result-status">গ্রেড: <b>${esc(s.grade||'—')}</b> &nbsp; | &nbsp; ফলাফল: ${status}</div>
+        </div>
+        ${gradeChartHtml()}
+      </div>
+      <div class="print-signatures"><span>শ্রেণি শিক্ষকের স্বাক্ষর</span><span>পরীক্ষা নিয়ন্ত্রকের স্বাক্ষর</span><span>অধ্যক্ষের স্বাক্ষর</span></div>
+      <div class="print-row"><button class="print-btn" onclick="printResult()">🖨 ফলাফল প্রিন্ট / PDF</button></div>
+    </div>`;
   resultArea.classList.remove("hidden");
   resultArea.scrollIntoView({behavior:"smooth",block:"start"});
 }
@@ -6823,16 +6852,33 @@ function showClassWiseResult(){
   if(!y||!ev||!c){return;}
   const list=students.filter(s=>String(s.year||"")===y&&s.exam===ev&&s.className===c);
   if(!list.length){
-    classWiseResult.innerHTML='<div class="classwise-empty">দুঃখিত! এই সাল ও শ্রেণির কোনো ফলাফল পাওয়া যায়নি।</div>';
+    classWiseResult.innerHTML='<div class="classwise-empty">দুঃখিত! এই সাল, পরীক্ষা ও শ্রেণির কোনো ফলাফল পাওয়া যায়নি।</div>';
     classWiseResult.classList.remove("hidden");
     return;
   }
   const f=list[0];
-  const rows=list.map((s,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(s.name)}</td><td>${bnNum(s.roll)}</td><td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`).join('');
+  const subjectNames=unique(list.flatMap(s=>(s.subjects||[]).map(x=>x.name)));
+  const passCount=list.filter(s=>s.grade && s.grade!=='F' && s.grade!=='অনুপস্থিত').length;
+  const passRate=list.length ? Math.round(passCount/list.length*100) : 0;
+  const subjectHeaders=subjectNames.map(name=>`<th class="vertical-subject">${esc(name)}</th>`).join('');
+  const rows=list.map((s,i)=>{
+    const byName=new Map((s.subjects||[]).map(x=>[x.name,x.marks]));
+    const marks=subjectNames.map(name=>`<td>${byName.has(name) ? (byName.get(name)==='*'?'—':bnNum(byName.get(name))) : '—'}</td>`).join('');
+    return `<tr><td>${bnNum(i+1)}</td><td class="student-name-cell">${esc(s.name)}</td><td>${bnNum(s.roll)}</td>${marks}<td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`;
+  }).join('');
   classWiseResult.innerHTML=`
-    <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
-    <div class="table-wrap"><table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th><th>রোল</th><th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
-    <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
+    <div class="print-sheet classwise-print-sheet">
+      ${printHeader('ফলাফল পত্র', `শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)} — শ্রেণি: ${esc(f.classBn||f.className)}`)}
+      <div class="class-summary-row">
+        <div><span>মোট পরীক্ষার্থী</span><strong>${bnNum(list.length)}</strong></div>
+        <div><span>শ্রেণি</span><strong>${esc(f.classBn||f.className)}</strong></div>
+        <div><span>পাশের হার</span><strong>${bnNum(passRate)}%</strong></div>
+        ${gradeChartHtml()}
+      </div>
+      <div class="table-wrap classwise-print-table-wrap"><table class="result-table classwise-table print-result-table"><thead><tr><th>ক্রমিক<br>নং</th><th>পরীক্ষার্থীর নাম</th><th>রোল</th>${subjectHeaders}<th>সর্বমোট<br>নম্বর</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="print-signatures"><span>শ্রেণি শিক্ষকের স্বাক্ষর</span><span>পরীক্ষা নিয়ন্ত্রকের স্বাক্ষর</span><span>অধ্যক্ষের স্বাক্ষর</span></div>
+      <div class="print-row"><button class="print-btn" onclick="printResult()">🖨 ফলাফল প্রিন্ট / PDF</button></div>
+    </div>`;
   classWiseResult.classList.remove("hidden");
   classWiseResult.scrollIntoView({behavior:"smooth",block:"start"});
 }
@@ -6865,6 +6911,9 @@ document.querySelectorAll("[data-view]").forEach(link=>link.addEventListener("cl
 
 function openMenu(){ menu.classList.add("open"); overlay.classList.add("show"); document.body.classList.add("menu-open"); }
 function closeMenu(){ menu.classList.remove("open"); overlay.classList.remove("show"); document.body.classList.remove("menu-open"); }
+function printResult(){
+  window.print();
+}
 document.getElementById("menuBtn").addEventListener("click",openMenu);
 document.getElementById("menuClose").addEventListener("click",closeMenu);
 overlay.addEventListener("click",closeMenu);
