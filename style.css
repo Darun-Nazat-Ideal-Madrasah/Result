@@ -204,3 +204,84 @@ select:disabled{background:#f3f5f4;color:#9aa2a8;cursor:not-allowed}
 .classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left}
 .classwise-empty{text-align:center;padding:24px;color:var(--muted)}
 .single-action{grid-template-columns:1fr}
+
+/* Print-friendly result sheets */
+.print-sheet{background:#fff;color:#111}
+.print-header{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:14px;padding:12px 0 10px;border-bottom:2px solid #111}
+.print-logo-wrap{display:flex;justify-content:center;align-items:center}
+.print-logo-wrap img{width:78px;height:78px;object-fit:contain}
+.print-title{text-align:center}
+.print-title h1{margin:0;font-size:29px;line-height:1.25;font-weight:800}
+.print-title h2{margin:4px 0 1px;font-size:22px;font-weight:800}
+.print-title p{margin:0;font-size:14px}
+.print-meta-row{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;border:1px solid #222;margin-top:10px}
+.print-meta-row>div{padding:8px 10px;border-right:1px solid #222;min-height:55px}
+.print-meta-row>div:last-child{border-right:0}
+.print-meta-row span,.class-summary-row span{display:block;font-size:11px;font-weight:600}
+.print-meta-row strong,.class-summary-row strong{display:block;font-size:15px;margin-top:1px}
+.print-body-grid{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:12px;align-items:start;margin-top:10px}
+.print-subject-area{min-width:0}
+.grade-chart{border:1px solid #222;background:#fff}
+.grade-chart-title{text-align:center;font-weight:800;font-size:14px;padding:4px;border-bottom:1px solid #222}
+.grade-grid{display:grid;grid-template-columns:1fr 1fr 1fr;font-size:11px;text-align:center}
+.grade-grid span,.grade-grid b,.grade-grid em{padding:3px 2px;border-right:1px solid #222;border-bottom:1px solid #222;font-style:normal}
+.grade-grid span:nth-child(3n),.grade-grid b:nth-child(3n),.grade-grid em:nth-child(3n){border-right:0}
+.grade-grid span:nth-last-child(-n+3),.grade-grid b:nth-last-child(-n+3),.grade-grid em:nth-last-child(-n+3){border-bottom:0}
+.result-table.print-result-table{margin:0;border:1px solid #222;min-width:0}
+.result-table.print-result-table th,.result-table.print-result-table td{border:1px solid #222;padding:6px 6px;font-size:12px;line-height:1.35}
+.result-table.print-result-table th{background:#fff}
+.result-table.print-result-table td.subject-name,.result-table.print-result-table th:nth-child(2),.classwise-table td.student-name-cell,.classwise-table th:nth-child(2){text-align:left}
+.print-summary{grid-template-columns:repeat(4,1fr);padding:8px 0 5px;gap:7px}
+.print-summary .summary-box{border:1px solid #222;border-radius:0;padding:5px}
+.print-summary .summary-box span{font-size:10px;color:#111}
+.print-summary .summary-box strong{font-size:15px}
+.personal-print-sheet .result-status{font-size:12px;padding:4px 0 0}
+.print-signatures{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:28px;padding-top:22px;text-align:center;font-size:11px}
+.print-signatures span{border-top:1px solid #222;padding-top:5px}
+.print-sheet .print-row{margin-top:12px}
+.class-summary-row{display:grid;grid-template-columns:1fr 1fr 1fr 160px;gap:8px;align-items:stretch;margin:10px 0}
+.class-summary-row>div:not(.grade-chart){border:1px solid #222;padding:7px 9px;text-align:center}
+.classwise-print-table-wrap{padding:0;overflow:visible}
+.classwise-print-sheet .classwise-table{width:100%;min-width:0;table-layout:auto}
+.classwise-print-sheet .classwise-table th,.classwise-print-sheet .classwise-table td{font-size:9px;padding:4px 3px;line-height:1.2}
+.classwise-print-sheet .classwise-table th:first-child,.classwise-print-sheet .classwise-table td:first-child{width:30px;text-align:center}
+.classwise-print-sheet .classwise-table th:nth-child(2),.classwise-print-sheet .classwise-table td:nth-child(2){min-width:115px}
+.classwise-print-sheet .classwise-table th:nth-child(3),.classwise-print-sheet .classwise-table td:nth-child(3){width:35px;text-align:center}
+.classwise-print-sheet .vertical-subject{writing-mode:vertical-rl;transform:rotate(180deg);height:90px;min-width:30px;max-width:42px;white-space:normal}
+
+@page personalPage{size:A4 portrait;margin:8mm}
+@page classwisePage{size:A4 landscape;margin:7mm}
+
+@media print{
+  html,body{background:#fff!important;margin:0!important;padding:0!important}
+  body{font-family:'Noto Sans Bengali',system-ui,sans-serif!important;color:#111!important}
+  .top-header,.result-card,.info-card,.contact-card,footer{display:none!important}
+  .main{width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+  #resultArea,#classWiseResult{margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important}
+  #resultArea.hidden,#classWiseResult.hidden{display:none!important}
+  .result-output,.classwise-output{display:block!important;border:0!important;box-shadow:none!important;margin:0!important;padding:0!important;overflow:visible!important;background:#fff!important}
+  .personal-print-sheet{page:personalPage}
+  .classwise-print-sheet{page:classwisePage}
+  .print-row{display:none!important}
+  .print-header{break-inside:avoid}
+  .print-meta-row,.class-summary-row,.grade-chart,.print-signatures{break-inside:avoid}
+  .classwise-print-table-wrap{overflow:visible!important}
+  .classwise-print-sheet .classwise-table thead{display:table-header-group}
+  .classwise-print-sheet .classwise-table tr{break-inside:avoid}
+}
+
+/* শ্রেণিওয়ারী ফলাফলে বিষয়ভিত্তিক নম্বর */
+.classwise-table th,.classwise-table td{text-align:center;white-space:nowrap}
+.classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left;white-space:normal}
+.classwise-print-sheet{display:none}
+@media print{
+  .classwise-output > .classwise-head,
+  .classwise-output > .table-wrap{display:none!important}
+  .classwise-output > .classwise-print-sheet{display:block!important}
+  .classwise-print-sheet .classwise-head{background:#fff!important;color:#111!important;padding:4px 0 8px!important;border:0!important}
+  .classwise-print-sheet .classwise-head img{width:45px!important;height:45px!important}
+  .classwise-print-sheet .classwise-head h2{font-size:17px!important}
+  .classwise-print-sheet .classwise-head p{font-size:10px!important}
+  .classwise-print-sheet .classwise-table th,.classwise-print-sheet .classwise-table td{font-size:8px!important;padding:3px 2px!important}
+  .classwise-print-sheet .classwise-table th:nth-child(2),.classwise-print-sheet .classwise-table td:nth-child(2){min-width:95px!important}
+}

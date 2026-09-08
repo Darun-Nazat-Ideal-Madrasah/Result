@@ -124,7 +124,7 @@ function showPersonalResult(s){
   const avg=s.average==null?'—':bnNum(Number(s.average).toFixed(2));
   const point=s.point==null?'—':bnNum(Number(s.point).toFixed(2));
   resultArea.innerHTML=`
-    <div class="result-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn || s.exam)} — ${esc(s.classBn || s.className)}</p></div></div>
+    <div class="result-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>দারুন নাজাত আইডিয়াল মাদরাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn || s.exam)} — ${esc(s.classBn || s.className)}</p></div></div>
     <div class="student-info">
       <div class="info-box"><small>পরীক্ষার্থীর নাম</small><strong>${esc(s.name)}</strong></div>
       <div class="info-box"><small>শ্রেণি</small><strong>${esc(s.classBn || s.className)}</strong></div>
@@ -169,11 +169,34 @@ function showClassWiseResult(){
     classWiseResult.classList.remove("hidden");
     return;
   }
+
   const f=list[0];
-  const rows=list.map((s,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(s.name)}</td><td>${bnNum(s.roll)}</td><td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`).join('');
+  const subjectNames=[];
+  list.forEach(s=>(s.subjects||[]).forEach(x=>{
+    const name=String(x.name||"").trim();
+    if(name && !subjectNames.includes(name)) subjectNames.push(name);
+  }));
+
+  const subjectHeader=subjectNames.map(name=>`<th>${esc(name)}</th>`).join('');
+  const rows=list.map((s,i)=>{
+    const marks=(s.subjects||[]);
+    const cells=subjectNames.map(name=>{
+      const sub=marks.find(x=>String(x.name||"").trim()===name);
+      const mark=sub?.marks;
+      return `<td>${mark==='*'||mark==null?'—':bnNum(mark)}</td>`;
+    }).join('');
+    return `<tr><td>${bnNum(i+1)}</td><td class="student-name-cell">${esc(s.name)}</td>${cells}<td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`;
+  }).join('');
+
+  const table=`<table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th>${subjectHeader}<th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table>`;
+
   classWiseResult.innerHTML=`
     <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
-    <div class="table-wrap"><table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th><th>রোল</th><th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="table-wrap">${table}</div>
+    <div class="classwise-print-sheet" aria-hidden="true">
+      <div class="print-header classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
+      <div class="classwise-print-table-wrap">${table}</div>
+    </div>
     <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
   classWiseResult.classList.remove("hidden");
   classWiseResult.scrollIntoView({behavior:"smooth",block:"start"});
