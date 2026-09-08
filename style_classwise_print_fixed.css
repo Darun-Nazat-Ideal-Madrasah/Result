@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --green:#087f4e;
+  --green-dark:#05663f;
+  --green-soft:#eaf8f1;
+  --text:#27313b;
+  --muted:#68727c;
+  --border:#d9dee3;
+  --bg:#f6f8f7;
+  --white:#fff;
+  --danger:#c62828;
+  --shadow:0 10px 35px rgba(0,0,0,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Noto Sans Bengali',system-ui,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.65;
+}
+.container{width:min(920px,calc(100% - 28px));margin:auto}
+.top-header{background:var(--green);color:#fff}
+.nav{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.brand{
+  color:#fff;text-decoration:none;display:flex;align-items:center;gap:12px;
+}
+.logo{
+  width:54px;height:54px;border-radius:50%;
+  object-fit:contain;background:#fff;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+.brand-text{display:flex;flex-direction:column}
+.brand-text strong{font-size:20px}
+.brand-text span{font-size:12px;opacity:.88}
+.menu-btn{
+  position:relative;z-index:1002;
+  border:0;background:transparent;color:#fff;font-size:31px;line-height:1;
+  cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  padding:8px 4px;
+}
+nav#mobileMenu{display:flex;flex-direction:column;position:fixed;z-index:1001;top:0;right:-100%;width:min(380px,88vw);height:100vh;background:#fff;color:var(--text);padding:76px 22px 28px;box-shadow:-12px 0 35px rgba(0,0,0,.18);transition:right .28s ease;overflow-y:auto;visibility:hidden;pointer-events:none}
+nav#mobileMenu.open{right:0;visibility:visible;pointer-events:auto}
+.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.48);z-index:1000;opacity:0;visibility:hidden;transition:.25s}
+.menu-overlay.show{opacity:1;visibility:visible}
+.menu-close{position:absolute;top:15px;right:20px;border:0;background:transparent;color:#26313b;font-size:40px;line-height:1;cursor:pointer}
+.drawer-logo{text-align:center;padding:0 0 24px}
+.drawer-logo img{width:82px;height:82px;object-fit:contain;border-radius:50%}
+nav#mobileMenu a{display:block;text-decoration:none;color:#111;text-align:center;font-size:20px;padding:17px 14px;margin:2px 0;border-radius:10px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+nav#mobileMenu a:first-of-type{background:#0b8f50;color:#fff;font-weight:700}
+nav#mobileMenu a:hover{background:var(--green-soft)}
+nav#mobileMenu a:first-of-type:hover{background:#0b8f50;color:#fff}
+body.menu-open{overflow:hidden}
+.hero{
+  border-top:1px solid rgba(255,255,255,.16);
+  padding:38px 0 43px;text-align:center;
+}
+.hero h1{font-size:clamp(28px,5vw,45px);margin:0 0 8px;font-weight:800}
+.hero p{font-size:17px;margin:0 0 5px}
+.hero small{opacity:.9;font-size:14px}
+
+.main{padding:48px 0 70px}
+.result-card,.result-output,.info-card,.contact-card{
+  background:var(--white);
+  border:1px solid #e4e7e9;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.result-card{padding:34px}
+.section-title{display:flex;gap:14px;align-items:center;margin-bottom:25px}
+.title-icon{
+  width:50px;height:50px;border-radius:14px;
+  display:grid;place-items:center;background:var(--green-soft);font-size:24px;
+}
+.section-title h2{margin:0;font-size:24px}
+.section-title p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.field{margin-bottom:19px}
+label{display:block;font-size:17px;font-weight:600;margin-bottom:8px}
+label b{color:var(--danger)}
+select,input{
+  width:100%;height:57px;padding:0 16px;
+  border:1px solid var(--border);border-radius:12px;
+  background:#fff;color:var(--text);font:inherit;font-size:16px;
+  outline:none;transition:.2s;
+}
+select:focus,input:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 3px rgba(8,127,78,.12);
+}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.btn{
+  min-height:55px;border-radius:12px;padding:10px 16px;
+  font:inherit;font-weight:700;cursor:pointer;border:1px solid var(--green);
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dark)}
+.btn-light{background:#fff;color:var(--green)}
+.message{margin-top:18px;padding:13px 15px;border-radius:10px;text-align:center}
+.message.error{background:#fff0f0;color:#a51f1f}
+.message.success{background:#edf9f2;color:#12653f}
+.hidden{display:none!important}
+
+.result-output{margin-top:28px;overflow:hidden}
+.result-head{
+  background:var(--green);color:#fff;text-align:center;padding:22px 20px;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+}
+.result-head img{width:58px;height:58px;border-radius:50%;object-fit:contain;background:#fff}
+.result-head h2{margin:0;font-size:25px}
+.result-status{text-align:center;padding:0 20px 12px}
+.result-head p{margin:3px 0 0;font-size:14px}
+.student-info{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:10px;padding:22px;border-bottom:1px solid #e5e8ea;
+}
+.info-box{background:#f7faf8;border-radius:11px;padding:11px 13px}
+.info-box small{display:block;color:var(--muted);font-size:12px}
+.info-box strong{font-size:15px}
+.table-wrap{overflow-x:auto;padding:0 20px}
+.result-table{width:100%;border-collapse:collapse;min-width:570px;margin:18px 0}
+.result-table th,.result-table td{
+  padding:12px 10px;border:1px solid #dfe4e7;text-align:center;
+}
+.result-table th{background:var(--green-soft);font-weight:700}
+.result-table td:first-child,.result-table th:first-child{text-align:left}
+.pass{color:#087f4e;font-weight:800}
+.fail{color:#c62828;font-weight:800}
+.summary{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;padding:4px 20px 24px;
+}
+.summary-box{
+  border:1px solid #e0e5e8;border-radius:12px;padding:13px;text-align:center;
+}
+.summary-box span{display:block;color:var(--muted);font-size:12px}
+.summary-box strong{font-size:19px}
+.print-row{display:flex;justify-content:center;padding:0 20px 24px}
+.print-btn{
+  border:0;background:var(--green);color:#fff;border-radius:10px;
+  padding:11px 24px;font:inherit;font-weight:700;cursor:pointer;
+}
+.info-card,.contact-card{margin-top:25px;padding:25px}
+.info-card h3,.contact-card h3{margin:0 0 9px;font-size:20px}
+.info-card ul{margin:0;padding-left:23px;color:#59636c}
+.contact-card{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.contact-card p{margin:0;color:var(--muted)}
+.contact-items{display:flex;flex-direction:column;gap:7px;font-size:14px}
+footer{
+  background:#076f45;color:#fff;text-align:center;
+  padding:25px 0;font-size:15px;
+}
+.footer-sub{font-size:12px;opacity:.8;margin-top:2px}
+
+@media(max-width:650px){
+  .container{width:min(100% - 20px,920px)}
+  .nav{min-height:75px}
+  .logo{width:46px;height:46px}
+  .brand-text strong{font-size:16px}
+  .hero{padding:29px 0 34px}
+  .hero h1{font-size:27px}
+  .hero p{font-size:14px}
+  .main{padding:25px 0 45px}
+  .result-card{padding:22px 16px;border-radius:17px}
+  .section-title h2{font-size:20px}
+  .grid-2,.actions{grid-template-columns:1fr}
+  .student-info{grid-template-columns:1fr 1fr;padding:15px}
+  .summary{grid-template-columns:1fr 1fr;padding:4px 15px 20px}
+  .table-wrap{padding:0 15px}
+  .contact-card{display:block}
+  .result-head,.classwise-head{padding:18px 14px}
+  .result-head img,.classwise-head img{width:48px;height:48px}
+  .result-head h2,.classwise-head h2{font-size:19px}
+  .contact-items{margin-top:15px}
+}
+
+@media print{
+  body{background:#fff}
+  .top-header,.result-card,.info-card,.contact-card,footer{display:none!important}
+  #resultArea.hidden,#classWiseResult.hidden{display:none!important}
+  .main{padding:0}
+  .result-output{display:block!important;box-shadow:none;border:1px solid #ccc;margin:0}
+  .print-row{display:none}
+}
+
+.select-field{position:relative}
+.field-help{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+select:disabled{background:#f3f5f4;color:#9aa2a8;cursor:not-allowed}
+
+.classwise-output{margin-top:24px;border:1px solid #e4e7e9;border-radius:16px;overflow:hidden;background:#fff}
+.classwise-head{background:var(--green);color:#fff;text-align:center;padding:20px;display:flex;align-items:center;justify-content:center;gap:14px}
+.classwise-head img{width:58px;height:58px;border-radius:50%;object-fit:contain;background:#fff}
+.classwise-head h2{margin:0;font-size:23px}
+.classwise-head p{margin:3px 0 0;font-size:14px}
+.classwise-table{min-width:620px}
+.classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left}
+.classwise-empty{text-align:center;padding:24px;color:var(--muted)}
+.single-action{grid-template-columns:1fr}
+
+/* Print-friendly result sheets */
+.print-sheet{background:#fff;color:#111}
+.print-header{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:14px;padding:12px 0 10px;border-bottom:2px solid #111}
+.print-logo-wrap{display:flex;justify-content:center;align-items:center}
+.print-logo-wrap img{width:78px;height:78px;object-fit:contain}
+.print-title{text-align:center}
+.print-title h1{margin:0;font-size:29px;line-height:1.25;font-weight:800}
+.print-title h2{margin:4px 0 1px;font-size:22px;font-weight:800}
+.print-title p{margin:0;font-size:14px}
+.print-meta-row{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;border:1px solid #222;margin-top:10px}
+.print-meta-row>div{padding:8px 10px;border-right:1px solid #222;min-height:55px}
+.print-meta-row>div:last-child{border-right:0}
+.print-meta-row span,.class-summary-row span{display:block;font-size:11px;font-weight:600}
+.print-meta-row strong,.class-summary-row strong{display:block;font-size:15px;margin-top:1px}
+.print-body-grid{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:12px;align-items:start;margin-top:10px}
+.print-subject-area{min-width:0}
+.grade-chart{border:1px solid #222;background:#fff}
+.grade-chart-title{text-align:center;font-weight:800;font-size:14px;padding:4px;border-bottom:1px solid #222}
+.grade-grid{display:grid;grid-template-columns:1fr 1fr 1fr;font-size:11px;text-align:center}
+.grade-grid span,.grade-grid b,.grade-grid em{padding:3px 2px;border-right:1px solid #222;border-bottom:1px solid #222;font-style:normal}
+.grade-grid span:nth-child(3n),.grade-grid b:nth-child(3n),.grade-grid em:nth-child(3n){border-right:0}
+.grade-grid span:nth-last-child(-n+3),.grade-grid b:nth-last-child(-n+3),.grade-grid em:nth-last-child(-n+3){border-bottom:0}
+.result-table.print-result-table{margin:0;border:1px solid #222;min-width:0}
+.result-table.print-result-table th,.result-table.print-result-table td{border:1px solid #222;padding:6px 6px;font-size:12px;line-height:1.35}
+.result-table.print-result-table th{background:#fff}
+.result-table.print-result-table td.subject-name,.result-table.print-result-table th:nth-child(2),.classwise-table td.student-name-cell,.classwise-table th:nth-child(2){text-align:left}
+.print-summary{grid-template-columns:repeat(4,1fr);padding:8px 0 5px;gap:7px}
+.print-summary .summary-box{border:1px solid #222;border-radius:0;padding:5px}
+.print-summary .summary-box span{font-size:10px;color:#111}
+.print-summary .summary-box strong{font-size:15px}
+.personal-print-sheet .result-status{font-size:12px;padding:4px 0 0}
+.print-signatures{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:28px;padding-top:22px;text-align:center;font-size:11px}
+.print-signatures span{border-top:1px solid #222;padding-top:5px}
+.print-sheet .print-row{margin-top:12px}
+.class-summary-row{display:grid;grid-template-columns:1fr 1fr 1fr 160px;gap:8px;align-items:stretch;margin:10px 0}
+.class-summary-row>div:not(.grade-chart){border:1px solid #222;padding:7px 9px;text-align:center}
+.classwise-print-table-wrap{padding:0;overflow:visible}
+.classwise-print-sheet .classwise-table{width:100%;min-width:0;table-layout:auto}
+.classwise-print-sheet .classwise-table th,.classwise-print-sheet .classwise-table td{font-size:9px;padding:4px 3px;line-height:1.2}
+.classwise-print-sheet .classwise-table th:first-child,.classwise-print-sheet .classwise-table td:first-child{width:30px;text-align:center}
+.classwise-print-sheet .classwise-table th:nth-child(2),.classwise-print-sheet .classwise-table td:nth-child(2){min-width:115px}
+.classwise-print-sheet .classwise-table th:nth-child(3),.classwise-print-sheet .classwise-table td:nth-child(3){width:35px;text-align:center}
+.classwise-print-sheet .vertical-subject{writing-mode:vertical-rl;transform:rotate(180deg);height:90px;min-width:30px;max-width:42px;white-space:normal}
+
+@page personalPage{size:A4 portrait;margin:8mm}
+@page classwisePage{size:A4 landscape;margin:7mm}
+
+@media print{
+  html,body{background:#fff!important;margin:0!important;padding:0!important}
+  body{font-family:'Noto Sans Bengali',system-ui,sans-serif!important;color:#111!important}
+  .top-header,.result-card,.info-card,.contact-card,footer{display:none!important}
+  .main{width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+  #resultArea,#classWiseResult{margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important}
+  #resultArea.hidden,#classWiseResult.hidden{display:none!important}
+  .result-output,.classwise-output{display:block!important;border:0!important;box-shadow:none!important;margin:0!important;padding:0!important;overflow:visible!important;background:#fff!important}
+  .personal-print-sheet{page:personalPage}
+  .classwise-print-sheet{page:classwisePage}
+  .print-row{display:none!important}
+  .print-header{break-inside:avoid}
+  .print-meta-row,.class-summary-row,.grade-chart,.print-signatures{break-inside:avoid}
+  .classwise-print-table-wrap{overflow:visible!important}
+  .classwise-print-sheet .classwise-table thead{display:table-header-group}
+  .classwise-print-sheet .classwise-table tr{break-inside:avoid}
+}
+
+/* শ্রেণিওয়ারী ফলাফলে বিষয়ভিত্তিক নম্বর */
+.classwise-table th,.classwise-table td{text-align:center;white-space:nowrap}
+.classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left;white-space:normal}
+.classwise-print-sheet{display:none}
+@media print{
+  .classwise-output > .classwise-head,
+  .classwise-output > .table-wrap{display:none!important}
+  .classwise-output > .classwise-print-sheet{display:block!important}
+  .classwise-print-sheet .classwise-head{background:#fff!important;color:#111!important;padding:4px 0 8px!important;border:0!important}
+  .classwise-print-sheet .classwise-head img{width:45px!important;height:45px!important}
+  .classwise-print-sheet .classwise-head h2{font-size:17px!important}
+  .classwise-print-sheet .classwise-head p{font-size:10px!important}
+  .classwise-print-sheet .classwise-table th,.classwise-print-sheet .classwise-table td{font-size:8px!important;padding:3px 2px!important}
+  .classwise-print-sheet .classwise-table th:nth-child(2),.classwise-print-sheet .classwise-table td:nth-child(2){min-width:95px!important}
+}
+
+/* FINAL FIX: Android/Chrome print blank-page workaround.
+   Print the actual classwise result table instead of a separate hidden print sheet. */
+@media print{
+  .classwise-output > .classwise-head,
+  .classwise-output > .table-wrap{display:block!important}
+  .classwise-output > .classwise-print-sheet{display:none!important}
+  .classwise-output .table-wrap{display:block!important;overflow:visible!important}
+  .classwise-output .classwise-table{display:table!important;visibility:visible!important;width:100%!important;min-width:0!important}
+  .classwise-output .classwise-table thead{display:table-header-group!important}
+  .classwise-output .classwise-table tbody{display:table-row-group!important}
+  .classwise-output .classwise-table tr{display:table-row!important;visibility:visible!important}
+  .classwise-output .classwise-table th,
+  .classwise-output .classwise-table td{display:table-cell!important;visibility:visible!important}
+  .classwise-output .print-row{display:none!important}
+}
