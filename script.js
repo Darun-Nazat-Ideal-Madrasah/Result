@@ -6680,12 +6680,18 @@ const className = document.getElementById("className");
 const form = document.getElementById("resultForm");
 const message = document.getElementById("message");
 const resultArea = document.getElementById("resultArea");
+const personalPanel = document.getElementById("personalPanel");
+const classPanel = document.getElementById("classPanel");
+const classYear = document.getElementById("classYear");
+const classWiseName = document.getElementById("classWiseName");
+const classWiseResult = document.getElementById("classWiseResult");
+const menu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("menuOverlay");
+
 document.getElementById("year").textContent = "২০২৬";
 
 const bnDigits = "০১২৩৪৫৬৭৮৯";
-function bnNum(v){
-  return String(v ?? "").replace(/\d/g, d => bnDigits[d]);
-}
+function bnNum(v){ return String(v ?? "").replace(/\d/g, d => bnDigits[d]); }
 function unique(list){ return [...new Set(list)]; }
 function fillSelect(select, values, placeholder){
   select.innerHTML = `<option value="">${placeholder}</option>`;
@@ -6699,78 +6705,75 @@ function esc(v){
   return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
 }
 
+const examOptions = [
+  {value:"First Term Exam", label:"প্রথম সাময়িক পরীক্ষা"},
+  {value:"Second Term Exam", label:"দ্বিতীয় সাময়িক পরীক্ষা"},
+  {value:"Annual Exam", label:"বার্ষিক পরীক্ষা"}
+];
+
 function getYears(){
   return unique(students.map(s => String(s.year || "2026"))).sort((a,b)=>Number(b)-Number(a));
 }
-
-function loadYears(){
-  fillSelect(yearSelect, getYears().map(y => ({value:y,label:bnNum(y)})), "-- সাল নির্বাচন করুন --");
-  exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
-  exam.disabled=true;
-  className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
-  className.disabled=true;
-  const help=document.getElementById("classHelp");
-  if(help) help.textContent="প্রথমে সাল নির্বাচন করুন";
+function getClasses(year){
+  return unique(students.filter(s=>String(s.year||"")===String(year)).map(s=>s.className)).map(c=>{
+    const f=students.find(s=>String(s.year||"")===String(year)&&s.className===c);
+    return {value:c,label:f?.classBn || c};
+  });
 }
-
-function loadExams(){
+function loadYears(){
+  const years=getYears().map(y=>({value:y,label:bnNum(y)}));
+  fillSelect(yearSelect,years,"-- সাল নির্বাচন করুন --");
+  fillSelect(classYear,years,"-- সাল নির্বাচন করুন --");
+  resetPersonal(false);
+  resetClassWise(false);
+}
+function loadPersonalClasses(){
   const y=yearSelect.value;
   if(!y){
-    exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
-    exam.disabled=true;
-    className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
+    fillSelect(className,[],"-- আগে সাল নির্বাচন করুন --");
     className.disabled=true;
     return;
   }
-  const exams=unique(students.filter(s=>String(s.year||"2026")===y).map(s=>s.exam)).map(e=>({
-    value:e,
-    label:students.find(s=>String(s.year||"2026")===y&&s.exam===e).examBn
-  }));
-  fillSelect(exam,exams,"-- পরীক্ষা নির্বাচন করুন --");
-  exam.disabled=exams.length===0;
-  className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
+  fillSelect(className,getClasses(y),"-- শ্রেণি নির্বাচন করুন --");
+  className.disabled=getClasses(y).length===0;
+}
+function resetPersonal(clearYear=true){
+  if(clearYear) yearSelect.value="";
+  fillSelect(exam,examOptions,"-- পরীক্ষা নির্বাচন করুন --");
+  fillSelect(className,[],"-- আগে সাল নির্বাচন করুন --");
   className.disabled=true;
-  const help=document.getElementById("classHelp");
-  if(help) help.textContent=exams.length ? "পরীক্ষা নির্বাচন করুন" : "এই সালের কোনো পরীক্ষার ফলাফল নেই";
+  document.getElementById("classHelp").textContent="প্রথমে সাল নির্বাচন করুন";
+  document.getElementById("roll").value="";
+}
+function resetClassWise(clearYear=true){
+  if(clearYear) classYear.value="";
+  fillSelect(classWiseName,[],"-- আগে সাল নির্বাচন করুন --");
+  classWiseName.disabled=true;
+  classWiseResult.classList.add("hidden");
 }
 
-yearSelect.addEventListener("change", loadExams);
-
-exam.addEventListener("change",()=>{
-  const help=document.getElementById("classHelp");
-  const y=yearSelect.value;
-  if(!y||!exam.value){
-    className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
-    className.disabled=true;
-    if(help) help.textContent="প্রথমে পরীক্ষা নির্বাচন করুন";
-    return;
-  }
-  const classes=unique(
-    students.filter(s=>String(s.year||"2026")===y&&s.exam===exam.value).map(s=>s.className)
-  ).map(c=>{
-    const f=students.find(s=>String(s.year||"2026")===y&&s.exam===exam.value&&s.className===c);
-    return {value:c,label:f.classBn};
-  });
-  fillSelect(className,classes,"-- শ্রেণি নির্বাচন করুন --");
-  className.disabled = classes.length === 0;
-  if(help) help.textContent = classes.length
-    ? "পরীক্ষা অনুযায়ী শ্রেণি নির্বাচন করুন"
-    : "এই পরীক্ষার কোনো শ্রেণির ফলাফল পাওয়া যায়নি";
+yearSelect.addEventListener("change",loadPersonalClasses);
+classYear.addEventListener("change",()=>{
+  const y=classYear.value;
+  const classes=y?getClasses(y):[];
+  fillSelect(classWiseName,classes,y?"-- শ্রেণি নির্বাচন করুন --":"-- আগে সাল নির্বাচন করুন --");
+  classWiseName.disabled=classes.length===0;
+  classWiseResult.classList.add("hidden");
 });
 
-function showResult(s){
-  const rows=s.subjects.map((x,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(x.name)}</td><td>${x.marks==='*'?'—':bnNum(x.marks)}</td></tr>`).join("");
-  const pos=typeof s.rank === "number" ? bnNum(s.rank) : esc(s.rank);
-  const absent=s.grade==='অনুপস্থিত' || !s.subjects.some(x=>typeof x.marks==='number');
+function showPersonalResult(s){
+  const rows=(s.subjects||[]).map((x,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(x.name)}</td><td>${x.marks==='*'?'—':bnNum(x.marks)}</td></tr>`).join("");
+  const pos=typeof s.rank === "number" ? bnNum(s.rank) : esc(s.rank || "—");
+  const absent=s.grade==='অনুপস্থিত' || !(s.subjects||[]).some(x=>typeof x.marks==='number');
   const status=absent ? '<span class="fail">অনুপস্থিত / অসম্পূর্ণ</span>' : (s.grade==='F' ? '<span class="fail">ফেল</span>' : '<span class="pass">উত্তীর্ণ</span>');
   const total=s.total==null?'—':bnNum(s.total);
   const avg=s.average==null?'—':bnNum(Number(s.average).toFixed(2));
   const point=s.point==null?'—':bnNum(Number(s.point).toFixed(2));
   resultArea.innerHTML=`
-    <div class="result-head"><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn)} — ${esc(s.classBn)}</p></div>
+    <div class="result-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>দারুন নাজাত আইডিয়াল মাদ্রাসা</h2><p>শিক্ষাবর্ষ: ${bnNum(s.year || "2026")} — ${esc(s.examBn || s.exam)} — ${esc(s.classBn || s.className)}</p></div></div>
     <div class="student-info">
       <div class="info-box"><small>পরীক্ষার্থীর নাম</small><strong>${esc(s.name)}</strong></div>
-      <div class="info-box"><small>শ্রেণি</small><strong>${esc(s.classBn)}</strong></div>
+      <div class="info-box"><small>শ্রেণি</small><strong>${esc(s.classBn || s.className)}</strong></div>
       <div class="info-box"><small>রোল নম্বর</small><strong>${bnNum(s.roll)}</strong></div>
     </div>
     <div class="table-wrap"><table class="result-table">
@@ -6782,7 +6785,7 @@ function showResult(s){
       <div class="summary-box"><span>পয়েন্ট</span><strong>${point}</strong></div>
       <div class="summary-box"><span>অবস্থান</span><strong>${pos}</strong></div>
     </div>
-    <div style="text-align:center;padding:0 20px 12px">গ্রেড: <b>${esc(s.grade||'—')}</b> &nbsp; | &nbsp; ফলাফল: ${status}</div>
+    <div class="result-status">গ্রেড: <b>${esc(s.grade||'—')}</b> &nbsp; | &nbsp; ফলাফল: ${status}</div>
     <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
   resultArea.classList.remove("hidden");
   resultArea.scrollIntoView({behavior:"smooth",block:"start"});
@@ -6793,22 +6796,60 @@ form.addEventListener("submit",e=>{
   resultArea.classList.add("hidden"); message.className="message hidden";
   const y=yearSelect.value, ev=exam.value, cv=className.value, roll=document.getElementById("roll").value.trim();
   if(!y||!ev||!cv||!roll){message.textContent="অনুগ্রহ করে সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর পূরণ করুন।";message.className="message error";return;}
-  const s=students.find(x=>String(x.year||"2026")===y&&x.exam===ev&&x.className===cv&&String(x.roll)===roll);
-  if(!s){message.textContent="দুঃখিত! এই রোল নম্বরের কোনো ফলাফল পাওয়া যায়নি।";message.className="message error";return;}
-  message.textContent="ফলাফল পাওয়া গেছে।";message.className="message success";showResult(s);
+  const s=students.find(x=>String(x.year||"")===y&&x.exam===ev&&x.className===cv&&String(x.roll)===roll);
+  if(!s){message.textContent="দুঃখিত! এই তথ্য অনুযায়ী কোনো ফলাফল পাওয়া যায়নি।";message.className="message error";return;}
+  message.textContent="ফলাফল পাওয়া গেছে।";message.className="message success";showPersonalResult(s);
 });
+
 form.addEventListener("reset",()=>setTimeout(()=>{
-  yearSelect.innerHTML='<option value="">-- সাল নির্বাচন করুন --</option>';
-  exam.innerHTML='<option value="">-- আগে সাল নির্বাচন করুন --</option>';
-  exam.disabled=true;
-  className.innerHTML='<option value="">-- আগে পরীক্ষা নির্বাচন করুন --</option>';
-  className.disabled=true;
-  const help=document.getElementById("classHelp");
-  if(help) help.textContent="প্রথমে সাল নির্বাচন করুন";
-  message.className="message hidden";
-  resultArea.classList.add("hidden");
+  resetPersonal(true); message.className="message hidden"; resultArea.classList.add("hidden");
 },0));
-document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
+
+function showClassWiseResult(){
+  const y=classYear.value, c=classWiseName.value;
+  classWiseResult.classList.add("hidden");
+  if(!y||!c){return;}
+  const list=students.filter(s=>String(s.year||"")===y&&s.className===c);
+  if(!list.length){
+    classWiseResult.innerHTML='<div class="classwise-empty">দুঃখিত! এই সাল ও শ্রেণির কোনো ফলাফল পাওয়া যায়নি।</div>';
+    classWiseResult.classList.remove("hidden");
+    return;
+  }
+  const f=list[0];
+  const rows=list.map((s,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(s.name)}</td><td>${bnNum(s.roll)}</td><td>${esc(s.examBn||s.exam||'—')}</td><td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`).join('');
+  classWiseResult.innerHTML=`
+    <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)}</p></div></div>
+    <div class="table-wrap"><table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th><th>রোল</th><th>পরীক্ষা</th><th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
+  classWiseResult.classList.remove("hidden");
+  classWiseResult.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+document.getElementById("classWiseForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  showClassWiseResult();
+});
+
+document.querySelectorAll("[data-view]").forEach(link=>link.addEventListener("click",e=>{
+  e.preventDefault();
+  const view=link.dataset.view;
+  if(view==="personal"){
+    personalPanel.classList.remove("hidden");
+    classPanel.classList.add("hidden");
+  }else{
+    personalPanel.classList.add("hidden");
+    classPanel.classList.remove("hidden");
+  }
+  closeMenu();
+  resultArea.classList.add("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+}));
+
+function openMenu(){ menu.classList.add("open"); overlay.classList.add("show"); document.body.classList.add("menu-open"); }
+function closeMenu(){ menu.classList.remove("open"); overlay.classList.remove("show"); document.body.classList.remove("menu-open"); }
+document.getElementById("menuBtn").addEventListener("click",openMenu);
+document.getElementById("menuClose").addEventListener("click",closeMenu);
+overlay.addEventListener("click",closeMenu);
+
+document.querySelectorAll("#mobileMenu a").forEach(a=>a.addEventListener("click",closeMenu));
 loadYears();
-document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
-loadFilters();
