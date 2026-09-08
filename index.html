@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="দারুন নাজাত আইডিয়াল মাদ্রাসার অনলাইন ফলাফল">
+<title>দারুন নাজাত আইডিয়াল মাদ্রাসা | অনলাইন ফলাফল</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <img class="header-image" src="assets/header.png" alt="দারুন নাজাত আইডিয়াল মাদ্রাসা">
+  </div>
+</header>
+
+<main class="container">
+  <section class="search-area">
+    <div class="section-label">ONLINE RESULT PORTAL</div>
+    <h1>আপনার ফলাফল দেখুন</h1>
+    <p class="subtitle">সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর নির্বাচন করে ফলাফল দেখুন</p>
+
+    <form id="resultForm" class="search-card">
+      <div class="field">
+        <label for="year">সাল</label>
+        <select id="year" required></select>
+      </div>
+      <div class="field">
+        <label for="exam">পরীক্ষা</label>
+        <select id="exam" required></select>
+      </div>
+      <div class="field">
+        <label for="classSelect">শ্রেণি</label>
+        <select id="classSelect" required></select>
+      </div>
+      <div class="field">
+        <label for="roll">রোল নম্বর</label>
+        <input id="roll" type="number" min="1" inputmode="numeric" placeholder="রোল নম্বর লিখুন" required>
+      </div>
+      <button class="search-button" type="submit">ফলাফল দেখুন</button>
+    </form>
+    <div id="message" class="message" hidden></div>
+  </section>
+
+  <section id="resultSection" class="result-section" hidden>
+    <div class="result-heading">
+      <div>
+        <div class="section-label">RESULT</div>
+        <h2>শিক্ষার্থীর ফলাফল</h2>
+      </div>
+      <button id="printButton" class="print-button" type="button">🖨 প্রিন্ট</button>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <section class="notice">
+    <strong>নোট:</strong> ফলাফল না পেলে সাল, পরীক্ষা, শ্রেণি ও রোল নম্বর সঠিকভাবে নির্বাচন করুন।
+  </section>
+</main>
+
+<footer>
+  <div>সঠিক ফলাফল • উজ্জ্বল ভবিষ্যৎ</div>
+  <small>© ২০২৬ দারুন নাজাত আইডিয়াল মাদ্রাসা</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
