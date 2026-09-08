@@ -1,13 +1,6 @@
 {
   "generatedAt": "AUTO",
-  "sources": [
-    {
-      "file": "2026-annual.xlsx",
-      "year": "2026",
-      "examKey": "annual",
-      "records": 124
-    }
-  ],
+  "sources": [],
   "students": [
     {
       "year": "2026",
