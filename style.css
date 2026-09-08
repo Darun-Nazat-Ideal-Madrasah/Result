@@ -42,19 +42,22 @@ body{
 .brand-text strong{font-size:20px}
 .brand-text span{font-size:12px;opacity:.88}
 .menu-btn{
-  border:0;background:transparent;color:#fff;font-size:31px;cursor:pointer;
+  position:relative;z-index:1002;
+  border:0;background:transparent;color:#fff;font-size:31px;line-height:1;
+  cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  padding:8px 4px;
 }
-nav{display:flex;flex-direction:column;position:fixed;z-index:1001;top:0;right:-380px;width:min(380px,88vw);height:100vh;background:#fff;color:var(--text);padding:76px 22px 28px;box-shadow:-12px 0 35px rgba(0,0,0,.18);transition:right .28s ease;overflow-y:auto}
-nav.open{right:0}
+nav#mobileMenu{display:flex;flex-direction:column;position:fixed;z-index:1001;top:0;right:-100%;width:min(380px,88vw);height:100vh;background:#fff;color:var(--text);padding:76px 22px 28px;box-shadow:-12px 0 35px rgba(0,0,0,.18);transition:right .28s ease;overflow-y:auto;visibility:hidden;pointer-events:none}
+nav#mobileMenu.open{right:0;visibility:visible;pointer-events:auto}
 .menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.48);z-index:1000;opacity:0;visibility:hidden;transition:.25s}
 .menu-overlay.show{opacity:1;visibility:visible}
 .menu-close{position:absolute;top:15px;right:20px;border:0;background:transparent;color:#26313b;font-size:40px;line-height:1;cursor:pointer}
 .drawer-logo{text-align:center;padding:0 0 24px}
 .drawer-logo img{width:82px;height:82px;object-fit:contain;border-radius:50%}
-nav a{display:block;text-decoration:none;color:#111;text-align:center;font-size:20px;padding:17px 14px;margin:2px 0;border-radius:10px}
-nav a:first-of-type{background:#0b8f50;color:#fff;font-weight:700}
-nav a:hover{background:var(--green-soft)}
-nav a:first-of-type:hover{background:#0b8f50;color:#fff}
+nav#mobileMenu a{display:block;text-decoration:none;color:#111;text-align:center;font-size:20px;padding:17px 14px;margin:2px 0;border-radius:10px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+nav#mobileMenu a:first-of-type{background:#0b8f50;color:#fff;font-weight:700}
+nav#mobileMenu a:hover{background:var(--green-soft)}
+nav#mobileMenu a:first-of-type:hover{background:#0b8f50;color:#fff}
 body.menu-open{overflow:hidden}
 .hero{
   border-top:1px solid rgba(255,255,255,.16);
@@ -197,6 +200,7 @@ select:disabled{background:#f3f5f4;color:#9aa2a8;cursor:not-allowed}
 .classwise-head img{width:58px;height:58px;border-radius:50%;object-fit:contain;background:#fff}
 .classwise-head h2{margin:0;font-size:23px}
 .classwise-head p{margin:3px 0 0;font-size:14px}
-.classwise-table{min-width:720px}
+.classwise-table{min-width:620px}
+.classwise-table th:nth-child(2),.classwise-table td:nth-child(2){text-align:left}
 .classwise-empty{text-align:center;padding:24px;color:var(--muted)}
 .single-action{grid-template-columns:1fr}

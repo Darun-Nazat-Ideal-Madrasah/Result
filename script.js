@@ -6683,6 +6683,7 @@ const resultArea = document.getElementById("resultArea");
 const personalPanel = document.getElementById("personalPanel");
 const classPanel = document.getElementById("classPanel");
 const classYear = document.getElementById("classYear");
+const classWiseExam = document.getElementById("classWiseExam");
 const classWiseName = document.getElementById("classWiseName");
 const classWiseResult = document.getElementById("classWiseResult");
 const menu = document.getElementById("mobileMenu");
@@ -6747,6 +6748,8 @@ function resetPersonal(clearYear=true){
 }
 function resetClassWise(clearYear=true){
   if(clearYear) classYear.value="";
+  fillSelect(classWiseExam,examOptions,"-- পরীক্ষা নির্বাচন করুন --");
+  classWiseExam.value="";
   fillSelect(classWiseName,[],"-- আগে সাল নির্বাচন করুন --");
   classWiseName.disabled=true;
   classWiseResult.classList.add("hidden");
@@ -6755,9 +6758,18 @@ function resetClassWise(clearYear=true){
 yearSelect.addEventListener("change",loadPersonalClasses);
 classYear.addEventListener("change",()=>{
   const y=classYear.value;
+  fillSelect(classWiseExam,examOptions,"-- পরীক্ষা নির্বাচন করুন --");
   const classes=y?getClasses(y):[];
   fillSelect(classWiseName,classes,y?"-- শ্রেণি নির্বাচন করুন --":"-- আগে সাল নির্বাচন করুন --");
   classWiseName.disabled=classes.length===0;
+  classWiseResult.classList.add("hidden");
+});
+
+classWiseExam.addEventListener("change",()=>{
+  classWiseResult.classList.add("hidden");
+});
+
+classWiseName.addEventListener("change",()=>{
   classWiseResult.classList.add("hidden");
 });
 
@@ -6806,20 +6818,20 @@ form.addEventListener("reset",()=>setTimeout(()=>{
 },0));
 
 function showClassWiseResult(){
-  const y=classYear.value, c=classWiseName.value;
+  const y=classYear.value, ev=classWiseExam.value, c=classWiseName.value;
   classWiseResult.classList.add("hidden");
-  if(!y||!c){return;}
-  const list=students.filter(s=>String(s.year||"")===y&&s.className===c);
+  if(!y||!ev||!c){return;}
+  const list=students.filter(s=>String(s.year||"")===y&&s.exam===ev&&s.className===c);
   if(!list.length){
     classWiseResult.innerHTML='<div class="classwise-empty">দুঃখিত! এই সাল ও শ্রেণির কোনো ফলাফল পাওয়া যায়নি।</div>';
     classWiseResult.classList.remove("hidden");
     return;
   }
   const f=list[0];
-  const rows=list.map((s,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(s.name)}</td><td>${bnNum(s.roll)}</td><td>${esc(s.examBn||s.exam||'—')}</td><td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`).join('');
+  const rows=list.map((s,i)=>`<tr><td>${bnNum(i+1)}</td><td>${esc(s.name)}</td><td>${bnNum(s.roll)}</td><td>${s.total==null?'—':bnNum(s.total)}</td><td>${s.average==null?'—':bnNum(Number(s.average).toFixed(2))}</td><td>${esc(s.grade||'—')}</td><td>${typeof s.rank==='number'?bnNum(s.rank):esc(s.rank||'—')}</td></tr>`).join('');
   classWiseResult.innerHTML=`
-    <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)}</p></div></div>
-    <div class="table-wrap"><table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th><th>রোল</th><th>পরীক্ষা</th><th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="classwise-head"><img src="logo.jpg" alt="মাদ্রাসার লোগো"><div><h2>${esc(f.classBn||f.className)} — শ্রেণিভিত্তিক ফলাফল</h2><p>শিক্ষাবর্ষ: ${bnNum(y)} — ${esc(f.examBn||f.exam)}</p></div></div>
+    <div class="table-wrap"><table class="result-table classwise-table"><thead><tr><th>ক্রম</th><th>শিক্ষার্থীর নাম</th><th>রোল</th><th>মোট</th><th>গড়</th><th>গ্রেড</th><th>অবস্থান</th></tr></thead><tbody>${rows}</tbody></table></div>
     <div class="print-row"><button class="print-btn" onclick="window.print()">🖨 ফলাফল প্রিন্ট / PDF</button></div>`;
   classWiseResult.classList.remove("hidden");
   classWiseResult.scrollIntoView({behavior:"smooth",block:"start"});
@@ -6827,6 +6839,12 @@ function showClassWiseResult(){
 
 document.getElementById("classWiseForm").addEventListener("submit",e=>{
   e.preventDefault();
+  const y=classYear.value, ev=classWiseExam.value, c=classWiseName.value;
+  if(!y||!ev||!c){
+    classWiseResult.innerHTML='<div class="classwise-empty">অনুগ্রহ করে সাল, পরীক্ষা ও শ্রেণি নির্বাচন করুন।</div>';
+    classWiseResult.classList.remove("hidden");
+    return;
+  }
   showClassWiseResult();
 });
 
