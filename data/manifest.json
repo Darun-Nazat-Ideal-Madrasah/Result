@@ -2,7 +2,14 @@
   "years": [
     "2026"
   ],
-  "sources": [],
+  "sources": [
+    {
+      "file": "2026-annual.xlsx",
+      "year": "2026",
+      "examKey": "annual",
+      "records": 124
+    }
+  ],
   "classes": [
     "Class-1",
     "Class-2",
