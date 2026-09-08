@@ -1180,6 +1180,153 @@ const students = [
     "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-1",
+    "classBn": "প্রথম শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-2",
     "classBn": "দ্বিতীয় শ্রেণি",
     "roll": "1",
@@ -2134,6 +2281,153 @@ const students = [
     "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-2",
+    "classBn": "দ্বিতীয় শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "কুরআন ও তাজবীদ",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-3",
     "classBn": "তৃতীয় শ্রেণি",
     "roll": "1",
@@ -2462,6 +2756,153 @@ const students = [
     "average": null,
     "point": null,
     "grade": "অনুপস্থিত",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-3",
+    "classBn": "তৃতীয় শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ ও তাজবীদ",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
     "rank": "—"
   },
   {
@@ -2963,6 +3404,153 @@ const students = [
     "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-4",
+    "classBn": "চতুর্থ শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "ইশরম্ননা দারসান",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Class-5",
     "classBn": "পঞ্চম শ্রেণি",
     "roll": "1",
@@ -3183,6 +3771,153 @@ const students = [
     "point": 5,
     "grade": "A+",
     "rank": "১ম"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-5",
+    "classBn": "পঞ্চম শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজীদ",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
   },
   {
     "year": "2026",
@@ -4036,6 +4771,153 @@ const students = [
     "year": "2026",
     "exam": "Second Term Exam",
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Class-6",
+    "classBn": "ষষ্ঠ শ্রেণি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "এসো আরবী শিখি",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
     "classBn": "নার্সারি",
     "roll": "1",
@@ -4530,6 +5412,47 @@ const students = [
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
     "classBn": "নার্সারি",
+    "roll": "13",
+    "reg": "",
+    "name": "আব্দুলস্নাহ আ: আনাছ",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": "*"
+      },
+      {
+        "name": "বাংলা",
+        "marks": "*"
+      },
+      {
+        "name": "ইংরেজী",
+        "marks": "*"
+      },
+      {
+        "name": "গণিত",
+        "marks": "*"
+      },
+      {
+        "name": "কালিমা ও মাসাইল",
+        "marks": "*"
+      },
+      {
+        "name": "হাদিস শরীফ",
+        "marks": "*"
+      }
+    ],
+    "total": null,
+    "average": null,
+    "point": null,
+    "grade": "অনুপস্থিত",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
     "roll": "12",
     "reg": "",
     "name": "সায়েম আলফা",
@@ -4571,39 +5494,145 @@ const students = [
     "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
     "className": "Narsari",
     "classBn": "নার্সারি",
-    "roll": "13",
+    "roll": "80-100",
     "reg": "",
-    "name": "আব্দুলস্নাহ আ: আনাছ",
+    "name": "অ+",
     "subjects": [
       {
         "name": "আরবী",
-        "marks": "*"
-      },
-      {
-        "name": "বাংলা",
-        "marks": "*"
-      },
-      {
-        "name": "ইংরেজী",
-        "marks": "*"
-      },
-      {
-        "name": "গণিত",
-        "marks": "*"
-      },
-      {
-        "name": "কালিমা ও মাসাইল",
-        "marks": "*"
-      },
-      {
-        "name": "হাদিস শরীফ",
-        "marks": "*"
+        "marks": 5
       }
     ],
     "total": null,
-    "average": null,
+    "average": 5.0,
     "point": null,
-    "grade": "অনুপস্থিত",
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Narsari",
+    "classBn": "নার্সারি",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "আরবী",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
     "rank": "—"
   },
   {
@@ -5495,6 +6524,153 @@ const students = [
     "point": 4.13,
     "grade": "A",
     "rank": 18
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "80-100",
+    "reg": "",
+    "name": "অ+",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 5
+      }
+    ],
+    "total": null,
+    "average": 5.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "70-79",
+    "reg": "",
+    "name": "অ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 4
+      }
+    ],
+    "total": null,
+    "average": 4.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "60-79",
+    "reg": "",
+    "name": "অ-",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 3.5
+      }
+    ],
+    "total": null,
+    "average": 3.5,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "50-79",
+    "reg": "",
+    "name": "ই",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 3
+      }
+    ],
+    "total": null,
+    "average": 3.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "40-79",
+    "reg": "",
+    "name": "ঈ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 2
+      }
+    ],
+    "total": null,
+    "average": 2.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "33-79",
+    "reg": "",
+    "name": "উ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 1
+      }
+    ],
+    "total": null,
+    "average": 1.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
+  },
+  {
+    "year": "2026",
+    "exam": "Second Term Exam",
+    "examBn": "দ্বিতীয় সাময়িক পরীক্ষা",
+    "className": "Hifz",
+    "classBn": "হিফজ",
+    "roll": "0-32",
+    "reg": "",
+    "name": "ঋ",
+    "subjects": [
+      {
+        "name": "কুরআন মাজিদ",
+        "marks": 0
+      }
+    ],
+    "total": null,
+    "average": 0.0,
+    "point": null,
+    "grade": "",
+    "rank": "—"
   }
 ];
 
@@ -5634,3 +6810,5 @@ form.addEventListener("reset",()=>setTimeout(()=>{
 },0));
 document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
 loadYears();
+document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.getElementById("mobileMenu");n.style.display=n.style.display==="flex"?"none":"flex";});
+loadFilters();
