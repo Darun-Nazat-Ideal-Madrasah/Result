@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="মাদরাসা ম্যানেজমেন্ট অ্যাপ">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>মাদরাসা ম্যানেজমেন্ট</title>
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>মাদরাসা ম্যানেজমেন্ট</h1>
+    <p>Student • Attendance • Result</p>
+  </div>
+  <button id="installBtn" class="secondary hidden">অ্যাপ ইনস্টল</button>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-page="dashboard">ড্যাশবোর্ড</button>
+  <button class="tab" data-page="students">ছাত্র</button>
+  <button class="tab" data-page="attendance">উপস্থিতি</button>
+  <button class="tab" data-page="results">ফলাফল</button>
+</nav>
+
+<main>
+<section id="dashboard" class="page active">
+  <div class="cards">
+    <div class="card"><span>মোট ছাত্র</span><strong id="totalStudents">0</strong></div>
+    <div class="card"><span>আজ উপস্থিত</span><strong id="presentToday">0</strong></div>
+    <div class="card"><span>আজ অনুপস্থিত</span><strong id="absentToday">0</strong></div>
+  </div>
+  <div class="panel">
+    <h2>দ্রুত কাজ</h2>
+    <div class="quick">
+      <button data-go="students">+ ছাত্র যোগ করুন</button>
+      <button data-go="attendance">উপস্থিতি নিন</button>
+      <button data-go="results">ফলাফল যোগ করুন</button>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>গুরুত্বপূর্ণ নোট</h2>
+    <p class="muted">এটি Version 1-এর প্রাথমিক অ্যাপ। তথ্য এই ডিভাইসের ব্রাউজারে সংরক্ষিত হচ্ছে। Production ব্যবহারের আগে নিরাপদ অনলাইন ডাটাবেস ও লগইন যোগ করা উচিত।</p>
+  </div>
+</section>
+
+<section id="students" class="page">
+  <div class="panel">
+    <div class="section-head"><h2>ছাত্র তালিকা</h2><button id="addStudentBtn">+ নতুন ছাত্র</button></div>
+    <input id="studentSearch" class="search" placeholder="নাম, রোল বা শ্রেণি দিয়ে খুঁজুন">
+    <div id="studentList" class="list"></div>
+  </div>
+</section>
+
+<section id="attendance" class="page">
+  <div class="panel">
+    <div class="section-head"><h2>দৈনিক উপস্থিতি</h2><input id="attendanceDate" type="date"></div>
+    <div id="attendanceList" class="attendance-list"></div>
+    <button id="saveAttendance" class="save">উপস্থিতি সংরক্ষণ</button>
+  </div>
+</section>
+
+<section id="results" class="page">
+  <div class="panel">
+    <div class="section-head"><h2>ফলাফল</h2><button id="addResultBtn">+ ফলাফল যোগ</button></div>
+    <div id="resultList" class="list"></div>
+  </div>
+</section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <button class="close" id="closeModal">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

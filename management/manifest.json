@@ -1,0 +1,10 @@
+{
+  "name":"মাদরাসা ম্যানেজমেন্ট",
+  "short_name":"Madrasa App",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#f5f7f7",
+  "theme_color":"#0f766e",
+  "lang":"bn",
+  "icons":[]
+}
