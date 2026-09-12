@@ -1,23 +1,18 @@
-# মাদরাসা ম্যানেজমেন্ট অ্যাপ — Version 1
+# Madrasa Management V2
 
-এই সংস্করণে আছে:
-- Dashboard
-- ছাত্র যোগ/খোঁজা/মুছে ফেলা
-- দৈনিক উপস্থিতি
-- ফলাফল যোগ ও তালিকা
-- PWA install support
-- LocalStorage data storage
+এই সংস্করণে Supabase Authentication + Database ব্যবহার করা হয়েছে।
 
 ## গুরুত্বপূর্ণ
-এটি এখন Prototype/Version 1। ডেটা ব্রাউজারের LocalStorage-এ থাকে। Production ব্যবহারের আগে:
-1. নিরাপদ Login/Auth
-2. অনলাইন Database
-3. Backup/Export
-4. Role-based admin access
-5. Privacy/security review
+`config.js`-এ শুধু Supabase Project URL এবং Publishable/Anon Key বসাতে হবে।
+কখনোই `service_role` বা Secret key ওয়েবসাইটে বসাবেন না।
+
+## Database
+আপনার Supabase-এ `students`, `attendance`, `results` table তৈরি করার পর
+`database-setup.sql` SQL Editor-এ চালাতে হবে।
+
+## Auth
+Supabase Authentication-এ Email provider চালু রাখুন এবং একজন admin user তৈরি করুন।
+তারপর অ্যাপে সেই email/password দিয়ে লগইন করুন।
 
 ## GitHub Pages
-এই ফাইলগুলো একটি GitHub repository-এর root-এ আপলোড করে Settings → Pages থেকে Deploy করা যায়।
-
-## Play Store
-Web app সম্পূর্ণ পরীক্ষা করার পর এটিকে Android app (AAB) হিসেবে প্যাকেজ করে Play Console-এ প্রকাশের জন্য প্রস্তুত করা যাবে।
+এই ফোল্ডারের ফাইলগুলো আপনার Repository-এর `management` ফোল্ডারে আপলোড/replace করুন।

@@ -1,23 +1,32 @@
 <!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0f766e">
-  <meta name="description" content="মাদরাসা ম্যানেজমেন্ট অ্যাপ">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-  <title>মাদরাসা ম্যানেজমেন্ট</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f766e">
+<meta name="description" content="মাদরাসা ম্যানেজমেন্ট অ্যাপ">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>মাদরাসা ম্যানেজমেন্ট</title>
 </head>
 <body>
 <header class="topbar">
-  <div>
-    <h1>মাদরাসা ম্যানেজমেন্ট</h1>
-    <p>Student • Attendance • Result</p>
-  </div>
-  <button id="installBtn" class="secondary hidden">অ্যাপ ইনস্টল</button>
+  <div><h1>মাদরাসা ম্যানেজমেন্ট</h1><p>Student • Attendance • Result</p></div>
+  <button id="logoutBtn" class="secondary hidden">লগআউট</button>
 </header>
 
+<section id="loginPage" class="login-wrap">
+  <div class="login-card">
+    <h2>অ্যাডমিন লগইন</h2>
+    <p class="muted">Supabase-এর নিরাপদ অ্যাকাউন্ট দিয়ে প্রবেশ করুন।</p>
+    <input id="email" type="email" placeholder="ইমেইল">
+    <input id="password" type="password" placeholder="পাসওয়ার্ড">
+    <button id="loginBtn">লগইন</button>
+    <p id="loginMsg" class="msg"></p>
+  </div>
+</section>
+
+<div id="app" class="hidden">
 <nav class="tabs">
   <button class="tab active" data-page="dashboard">ড্যাশবোর্ড</button>
   <button class="tab" data-page="students">ছাত্র</button>
@@ -40,10 +49,7 @@
       <button data-go="results">ফলাফল যোগ করুন</button>
     </div>
   </div>
-  <div class="panel">
-    <h2>গুরুত্বপূর্ণ নোট</h2>
-    <p class="muted">এটি Version 1-এর প্রাথমিক অ্যাপ। তথ্য এই ডিভাইসের ব্রাউজারে সংরক্ষিত হচ্ছে। Production ব্যবহারের আগে নিরাপদ অনলাইন ডাটাবেস ও লগইন যোগ করা উচিত।</p>
-  </div>
+  <div id="appMsg" class="msg"></div>
 </section>
 
 <section id="students" class="page">
@@ -69,6 +75,7 @@
   </div>
 </section>
 </main>
+</div>
 
 <div id="modal" class="modal hidden">
   <div class="modal-box">
@@ -77,6 +84,8 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

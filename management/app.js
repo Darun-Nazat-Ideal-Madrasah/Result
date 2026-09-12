@@ -1,64 +1,149 @@
-const $=s=>document.querySelector(s);
-const today=()=>new Date().toISOString().slice(0,10);
-let students=JSON.parse(localStorage.getItem("mms_students")||"[]");
-let attendance=JSON.parse(localStorage.getItem("mms_attendance")||"{}");
-let results=JSON.parse(localStorage.getItem("mms_results")||"[]");
+const { createClient } = window.supabase;
+let sb = null;
+let students = [];
+let attendanceCache = {};
+let results = [];
 
-function save(){localStorage.setItem("mms_students",JSON.stringify(students));localStorage.setItem("mms_attendance",JSON.stringify(attendance));localStorage.setItem("mms_results",JSON.stringify(results));}
-function page(name){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===name));document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.page===name)); if(name==="dashboard")renderDash();if(name==="students")renderStudents();if(name==="attendance")renderAttendance();if(name==="results")renderResults();}
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>page(b.dataset.page));
-document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>page(b.dataset.go));
+const $ = id => document.getElementById(id);
+const today = () => new Date().toISOString().slice(0,10);
 
-function renderDash(){
- $("#totalStudents").textContent=students.length;
- const a=attendance[today()]||{};
- $("#presentToday").textContent=students.filter(s=>a[s.id]==="P").length;
- $("#absentToday").textContent=students.filter(s=>a[s.id]==="A").length;
+function configured(){
+  return window.SUPABASE_URL && window.SUPABASE_ANON_KEY &&
+    !window.SUPABASE_URL.includes("PASTE_") && !window.SUPABASE_ANON_KEY.includes("PASTE_");
 }
-function openModal(html){$("#modalContent").innerHTML=html;$("#modal").classList.remove("hidden")}
-$("#closeModal").onclick=()=>$("#modal").classList.add("hidden");
-$("#modal").onclick=e=>{if(e.target.id==="modal")$("#modal").classList.add("hidden")};
+function msg(text, error=false){ $("appMsg").textContent=text; $("appMsg").style.color=error?"#b42318":"#067647"; }
+function showPage(id){
+  document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.page===id));
+  $(id).classList.add("active");
+  if(id==="students") loadStudents();
+  if(id==="attendance") loadAttendance();
+  if(id==="results") loadResults();
+  if(id==="dashboard") refreshDashboard();
+}
+function openModal(html){ $("modalContent").innerHTML=html; $("modal").classList.remove("hidden"); }
+function closeModal(){ $("modal").classList.add("hidden"); }
 
-$("#addStudentBtn").onclick=()=>openModal(`
-<h2>নতুন ছাত্র যোগ</h2><form class="form" id="studentForm">
-<input name="name" required placeholder="ছাত্রের নাম">
-<input name="father" placeholder="পিতার নাম">
-<input name="roll" placeholder="রোল">
-<input name="className" placeholder="শ্রেণি/বিভাগ">
-<input name="phone" placeholder="মোবাইল নম্বর">
-<button>সংরক্ষণ</button></form>`);
-document.addEventListener("submit",e=>{
- if(e.target.id==="studentForm"){e.preventDefault();const f=new FormData(e.target);students.push({id:Date.now().toString(),name:f.get("name"),father:f.get("father"),roll:f.get("roll"),className:f.get("className"),phone:f.get("phone")});save();$("#modal").classList.add("hidden");renderStudents();renderDash();}
- if(e.target.id==="resultForm"){e.preventDefault();const f=new FormData(e.target);results.push({id:Date.now().toString(),studentId:f.get("studentId"),subject:f.get("subject"),marks:f.get("marks"),exam:f.get("exam")});save();$("#modal").classList.add("hidden");renderResults();}
-});
+async function start(){
+  if(!configured()){
+    $("loginPage").classList.remove("hidden");
+    $("app").classList.add("hidden");
+    $("loginMsg").textContent="প্রথমে config.js-এ Supabase URL ও Publishable/Anon Key বসাতে হবে।";
+    return;
+  }
+  sb = createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+  const {data:{session}} = await sb.auth.getSession();
+  if(session) showApp();
+  else { $("loginPage").classList.remove("hidden"); $("app").classList.add("hidden"); }
+  sb.auth.onAuthStateChange((_event, session)=> session ? showApp() : showLogin());
+}
+function showApp(){
+  $("loginPage").classList.add("hidden"); $("app").classList.remove("hidden"); $("logoutBtn").classList.remove("hidden");
+  $("attendanceDate").value=today(); refreshDashboard();
+}
+function showLogin(){
+  $("loginPage").classList.remove("hidden"); $("app").classList.add("hidden"); $("logoutBtn").classList.add("hidden");
+}
+async function refreshDashboard(){
+  if(!sb)return;
+  const {count}=await sb.from("students").select("*",{count:"exact",head:true});
+  $("totalStudents").textContent=count||0;
+  const d=today();
+  const {data}=await sb.from("attendance").select("status").eq("date",d);
+  $("presentToday").textContent=(data||[]).filter(x=>x.status==="present").length;
+  $("absentToday").textContent=(data||[]).filter(x=>x.status==="absent").length;
+}
+async function loadStudents(){
+  const {data,error}=await sb.from("students").select("*").order("roll",{ascending:true});
+  if(error){msg(error.message,true);return}
+  students=data||[]; renderStudents();
+  renderAttendanceStudents();
+}
 function renderStudents(){
- const q=($("#studentSearch").value||"").toLowerCase();
- const arr=students.filter(s=>(s.name+" "+s.roll+" "+s.className).toLowerCase().includes(q));
- $("#studentList").innerHTML=arr.length?arr.map(s=>`<div class="student"><div><b>${esc(s.name)}</b><br><small>রোল: ${esc(s.roll||"-")} • ${esc(s.className||"-")}<br>অভিভাবক: ${esc(s.father||"-")} • ${esc(s.phone||"-")}</small></div><div class="actions"><button class="danger" onclick="removeStudent('${s.id}')">মুছুন</button></div></div>`).join(""):`<p class="muted">কোনো ছাত্র পাওয়া যায়নি।</p>`;
+  const q=($("studentSearch").value||"").toLowerCase();
+  const arr=students.filter(s=>`${s.name} ${s.roll} ${s.class_name}`.toLowerCase().includes(q));
+  $("studentList").innerHTML=arr.length?arr.map(s=>`
+  <div class="item"><strong>${esc(s.name)}</strong>
+  <span class="small">রোল: ${esc(s.roll||"—")} • শ্রেণি: ${esc(s.class_name||"—")}</span>
+  <span class="small">অভিভাবক: ${esc(s.father_name||"—")} • ফোন: ${esc(s.phone||"—")}</span></div>`).join(""):"কোনো ছাত্র পাওয়া যায়নি।";
 }
-$("#studentSearch").oninput=renderStudents;
-window.removeStudent=id=>{if(confirm("এই ছাত্রকে মুছে ফেলবেন?")){students=students.filter(s=>s.id!==id);save();renderStudents();renderDash()}};
-
-$("#attendanceDate").value=today(); $("#attendanceDate").onchange=renderAttendance;
-function renderAttendance(){
- const d=$("#attendanceDate").value||today(), a=attendance[d]||{};
- $("#attendanceList").innerHTML=students.length?students.map(s=>`<div class="attendance-row"><div><b>${esc(s.name)}</b><br><small>${esc(s.className||"")} • রোল ${esc(s.roll||"-")}</small></div><label><input type="radio" name="att_${s.id}" value="P" ${a[s.id]!=="A"?"checked":""}> উপস্থিত</label><label><input type="radio" name="att_${s.id}" value="A" ${a[s.id]==="A"?"checked":""}> অনুপস্থিত</label></div>`).join(""):`<p class="muted">আগে ছাত্র যোগ করুন।</p>`;
+function renderAttendanceStudents(){
+  const date=$("attendanceDate").value||today();
+  $("attendanceList").innerHTML=students.length?students.map(s=>{
+    const v=attendanceCache[`${s.id}_${date}`]||"present";
+    return `<div class="att-row"><span><strong>${esc(s.name)}</strong><br><span class="small">রোল ${esc(s.roll||"—")}</span></span>
+    <select data-att="${s.id}"><option value="present" ${v==="present"?"selected":""}>উপস্থিত</option><option value="absent" ${v==="absent"?"selected":""}>অনুপস্থিত</option><option value="late" ${v==="late"?"selected":""}>বিলম্ব</option></select></div>`
+  }).join(""):"আগে ছাত্র যোগ করুন।";
 }
-$("#saveAttendance").onclick=()=>{const d=$("#attendanceDate").value||today();attendance[d]={};students.forEach(s=>{const x=document.querySelector(`input[name="att_${s.id}"]:checked`);attendance[d][s.id]=x?x.value:"P"});save();renderDash();alert("উপস্থিতি সংরক্ষণ হয়েছে।")};
-
-$("#addResultBtn").onclick=()=>openModal(`<h2>ফলাফল যোগ</h2><form class="form" id="resultForm">
-<select name="studentId" required>${students.map(s=>`<option value="${s.id}">${esc(s.name)} — রোল ${esc(s.roll||"-")}</option>`).join("")}</select>
-<input name="exam" required placeholder="পরীক্ষার নাম">
-<input name="subject" required placeholder="বিষয়ের নাম">
-<input name="marks" required type="number" min="0" max="100" placeholder="প্রাপ্ত নম্বর">
-<button>সংরক্ষণ</button></form>`);
-function renderResults(){
- $("#resultList").innerHTML=results.length?results.slice().reverse().map(r=>{const s=students.find(x=>x.id===r.studentId);return `<div class="result-row"><div><b>${esc(s?.name||"মুছে ফেলা ছাত্র")}</b><br><small>${esc(r.exam)} • ${esc(r.subject)}</small></div><span class="badge">${esc(r.marks)} / 100</span></div>`}).join(""):`<p class="muted">এখনও কোনো ফলাফল নেই।</p>`;
+async function loadAttendance(){
+  if(!students.length) await loadStudents();
+  const date=$("attendanceDate").value||today();
+  const {data,error}=await sb.from("attendance").select("*").eq("date",date);
+  if(error){msg(error.message,true);return}
+  attendanceCache={};
+  (data||[]).forEach(x=>attendanceCache[`${x.student_id}_${date}`]=x.status);
+  renderAttendanceStudents();
 }
-function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
-renderDash();renderStudents();renderAttendance();renderResults();
+async function saveAttendance(){
+  const date=$("attendanceDate").value||today();
+  const rows=[...document.querySelectorAll("[data-att]")].map(sel=>({student_id:Number(sel.dataset.att),date,status:sel.value}));
+  if(!rows.length)return;
+  const {error}=await sb.from("attendance").upsert(rows,{onConflict:"student_id,date"});
+  if(error) msg(error.message,true); else {msg("উপস্থিতি সংরক্ষণ হয়েছে।");refreshDashboard();}
+}
+async function loadResults(){
+  const {data,error}=await sb.from("results").select("*").order("created_at",{ascending:false});
+  if(error){msg(error.message,true);return}
+  results=data||[];
+  $("resultList").innerHTML=results.length?results.map(r=>{
+    const s=students.find(x=>x.id===r.student_id);
+    return `<div class="item"><strong>${esc(s?s.name:"ছাত্র #"+r.student_id)}</strong>
+    <span>পরীক্ষা: ${esc(r.exam_name||"—")} • বিষয়: ${esc(r.subject||"—")}</span><br>
+    <span>নম্বর: ${esc(r.marks)} / ${esc(r.total_marks)}</span></div>`
+  }).join(""):"কোনো ফলাফল নেই।";
+}
+function addStudent(){
+  openModal(`<h2>নতুন ছাত্র</h2>
+  <input id="mName" placeholder="ছাত্রের নাম">
+  <div class="row"><input id="mRoll" placeholder="রোল"><input id="mClass" placeholder="শ্রেণি"></div>
+  <input id="mFather" placeholder="পিতার/অভিভাবকের নাম"><input id="mPhone" placeholder="ফোন নম্বর">
+  <button id="doAdd">সংরক্ষণ</button>`);
+  $("doAdd").onclick=async()=>{
+    const name=$("mName").value.trim(); if(!name){alert("নাম দিন");return}
+    const {error}=await sb.from("students").insert({name,roll:$("mRoll").value.trim(),class_name:$("mClass").value.trim(),father_name:$("mFather").value.trim(),phone:$("mPhone").value.trim()});
+    if(error) alert(error.message); else {closeModal();loadStudents();refreshDashboard();msg("ছাত্র যোগ হয়েছে।")}
+  };
+}
+function addResult(){
+  const opts=students.map(s=>`<option value="${s.id}">${esc(s.name)} — ${esc(s.roll||"")}</option>`).join("");
+  openModal(`<h2>ফলাফল যোগ</h2>
+  <select id="rStudent">${opts}</select>
+  <input id="rExam" placeholder="পরীক্ষার নাম">
+  <input id="rSubject" placeholder="বিষয়">
+  <div class="row"><input id="rMarks" type="number" placeholder="প্রাপ্ত নম্বর"><input id="rTotal" type="number" value="100" placeholder="পূর্ণ নম্বর"></div>
+  <button id="doResult">সংরক্ষণ</button>`);
+  $("doResult").onclick=async()=>{
+    const {error}=await sb.from("results").insert({student_id:Number($("rStudent").value),exam_name:$("rExam").value.trim(),subject:$("rSubject").value.trim(),marks:Number($("rMarks").value),total_marks:Number($("rTotal").value)});
+    if(error)alert(error.message);else{closeModal();loadResults();msg("ফলাফল যোগ হয়েছে।")}
+  };
+}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
 
-let deferred;
-window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;$("#installBtn").classList.remove("hidden")});
-$("#installBtn").onclick=async()=>{if(deferred){deferred.prompt();deferred=null;$("#installBtn").classList.add("hidden")}};
-if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>showPage(b.dataset.go));
+$("loginBtn").onclick=async()=>{
+  if(!sb)return;
+  $("loginMsg").textContent="লগইন হচ্ছে...";
+  const {error}=await sb.auth.signInWithPassword({email:$("email").value.trim(),password:$("password").value});
+  $("loginMsg").textContent=error?error.message:"";
+};
+$("logoutBtn").onclick=()=>sb.auth.signOut();
+$("addStudentBtn").onclick=addStudent;
+$("addResultBtn").onclick=()=>{if(!students.length){alert("আগে একজন ছাত্র যোগ করুন।");return}addResult()};
+$("saveAttendance").onclick=saveAttendance;
+$("studentSearch").oninput=renderStudents;
+$("attendanceDate").onchange=loadAttendance;
+$("closeModal").onclick=closeModal;
+$("modal").onclick=e=>{if(e.target===$("modal"))closeModal()};
+
+start();
